@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+// Templates
+
 import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
