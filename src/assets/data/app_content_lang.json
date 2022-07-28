@@ -1,0 +1,18 @@
+{
+    "es": {
+        "attributes": {
+            "name": "Español",
+            "shortname": "ESP",
+            "code": "es"
+        },
+        "loading": "Cargando página..."
+    },
+    "en": {
+        "attributes": {
+            "name": "English",
+            "shortname": "ENG",
+            "code": "en"
+        },
+        "loading": "Loading page..."
+    }
+}
