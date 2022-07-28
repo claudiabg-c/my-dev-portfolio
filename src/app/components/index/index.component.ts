@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { DataService } from '../../services/data.service';
+
 
 @Component({
   selector: 'app-index',
@@ -7,9 +11,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() {}
+  private debug: boolean = false;
+  public langs: any = [];
+  public config: any = [];
 
-  ngOnInit(): void {
+  constructor(
+    private _router: Router,
+    private _dataAPI: DataService
+  ) {
+    if (this.debug){console.log('*** LOADING INDEX...');}
   }
 
+  ngOnInit(): void {
+    if (this.debug) {console.log('*** INITIALIZING...');}
+    this.GetConfig();
+  }
+
+  GetConfig(){
+    if (this.debug){console.log('*** LOADING CONFIG...');}
+    this._dataAPI.getConfig().subscribe(res => {
+      this.config = res.config;
+      this.langs = this.config.languages.langs;
+
+      if (this.debug) {
+        console.log("****** CONFIG: ", this.config);
+        console.log("****** LANGS: ", this.langs);
+        console.log("****** ACTIVE LANGUAGES: " + this.langs.length);
+      }
+      this.LoadPage()
+    });
+  }
+
+  LoadPage(){
+    if (this.debug){console.log('*** LOADING PAGE...');}
+    let langDefault = this.langs[0];
+    document.documentElement.lang = langDefault;
+    this._router.navigate([ '/' + langDefault + '/home']);
+    if (this.debug) {console.log("Redirected to: HOME PAGE (" + langDefault + ")");}
+  }
 }
