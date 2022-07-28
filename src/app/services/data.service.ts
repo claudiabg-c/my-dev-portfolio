@@ -15,4 +15,12 @@ export class DataService {
   getConfig(): Observable<any>{
     return this._http.get('./assets/data/app_config.json');
   }
+
+  getContentLang(): Observable<any>{
+    return this._http.get('./assets/data/app_content_lang.json');
+  }
+
+  getContent(): Observable<any>{
+    return this._http.get('./assets/data/app_content.json');
+  }
 }
