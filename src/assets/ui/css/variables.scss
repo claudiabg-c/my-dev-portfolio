@@ -1,15 +1,3 @@
-@font-face {
-    font-family: 'Uchen-Regular';
-    src: url('../typo/Uchen-Regular.eot');
-    src: url('../typo/Uchen-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../typo/Uchen-Regular.svg#Uchen-Regular') format('svg'),
-         url('../typo/Uchen-Regular.ttf') format('truetype'),
-         url('../typo/Uchen-Regular.woff') format('woff'),
-         url('../typo/Uchen-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-  
-
 $background_color: #995335;
-$color_1: #2a8adc;
+$color_1: white;
+$color_2: #2a8adc;
