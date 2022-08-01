@@ -13,9 +13,13 @@ export class NavbarComponent implements OnInit {
   private debug: boolean = true;
 
   public config: any = [];
-  public lang: string = "";
-  public path: string = "";
   public data: any = [];
+  public path: string = "";
+  public lang: string = "";
+  public otherLang: string = "";
+  public selectLang: string = "";
+  public langData: any = [];
+  public otherLangData: any = [];
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -31,6 +35,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.GetConfig();
     this.GetData();
+    this.GetDataLang(this.lang);
   }
 
   GetConfig(){
@@ -42,7 +47,7 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  GetData(){
+  GetData() {
     if (this.debug) {console.log('*** LOADING DATA...');}
     this._dataAPI.getContent().subscribe(res => {
       this.data = res[this.lang];
@@ -53,4 +58,18 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+  
+  GetDataLang(lang: string) {
+    this.lang === 'es' ? this.otherLang = 'en' : this.otherLang = 'es';
+    this._dataAPI.getContentLang().subscribe(res => {
+      this.langData = res[lang].language;
+      this.otherLangData = res[this.otherLang].language;
+      this.selectLang = res[lang].selectLang;
+
+      if (this.debug) {
+        console.log("****** LANG DATA: ", this.langData);
+      }
+    });
+  }
+  
 }

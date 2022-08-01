@@ -15,5 +15,38 @@
             padding: 10px;
             color: $color_2;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            &:hover .dropdown-content {
+                display: block;
+            }
+            .dropbtn {
+                background-color: $background_color;
+                border: none;
+                img {
+                    height: 25px;
+                    border-radius: 50px;
+                }
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                a {
+                    padding: 12px 7px;
+                    display: block;
+                    img {
+                        height: 25px;
+                        border-radius: 70px;
+                        object-fit: cover;
+                        &:hover {
+                            transform: scale(1.2);
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -5,9 +5,15 @@
                 <img src="../../../assets/ui/images/claudias_home_picture.png" class="img-fluid" title="{{config.name}}" alt="{{config.name}}">
             </a>
         </div>
-        <div class="social-media">
+        <div class="social-media language">
             <a [href]="data.rrss_01" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a [href]="data.rrss_02" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn" [title]="selectLang"><img [src]="langData.flag" alt="langData.name"></button>
+                <div class="dropdown-content">
+                  <a [routerLink]="['/' + otherLang + '/home']" [title]="otherLangData.name"><img [src]="otherLangData.flag" alt="otherLangData.name"></a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
