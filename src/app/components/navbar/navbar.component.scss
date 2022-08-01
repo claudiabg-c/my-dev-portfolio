@@ -1,0 +1,19 @@
+@import '../../../assets/ui/css/variables.scss';
+
+.container-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img-fluid {
+        color: $color_1;
+        margin: 10px;
+        height: 50px;
+    }
+    .social-media {
+        .fa-brands {
+            padding: 10px;
+            color: $color_2;
+        }
+    }
+}

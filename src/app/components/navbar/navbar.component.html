@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<section class="app-navbar fadein container-fluid">
+    <div class="container-navbar">
+        <div class="logo text-left">
+            <a [routerLink]="['/' + lang + '/home']">
+                <img src="../../../assets/ui/images/claudias_home_picture.png" class="img-fluid" title="{{config.name}}" alt="{{config.name}}">
+            </a>
+        </div>
+        <div class="social-media">
+            <a [href]="data.rrss_01" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a [href]="data.rrss_02" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+</section>
