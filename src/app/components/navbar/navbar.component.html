@@ -9,7 +9,9 @@
             <a [href]="data.rrss_01" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a [href]="data.rrss_02" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
             <div class="dropdown">
-                <button class="dropbtn" [title]="selectLang"><img [src]="langData.flag" alt="langData.name"></button>
+                <button class="dropbtn" [title]="selectLang" (click)="showOtherLangs()">
+                    <img [src]="langData.flag" alt="langData.name">
+                </button>
                 <div class="dropdown-content">
                     <a (click)="reloadThePage()" [title]="otherLangData.name">
                         <img [src]="otherLangData.flag" alt="otherLangData.name">

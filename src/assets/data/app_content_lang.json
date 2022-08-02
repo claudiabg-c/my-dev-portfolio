@@ -7,7 +7,7 @@
             "flag": "./assets/ui/images/spain_flag.png"
         },
         "loading": "Cargando página...",
-        "selectLang": "Selecciona idioma"
+        "selectLang": "Selecciona tu idioma"
     },
     "en": {
         "language": {
@@ -17,6 +17,6 @@
             "flag": "./assets/ui/images/uk_flag.png"
         },
         "loading": "Loading page...",
-        "selectLang": "Select language"
+        "selectLang": "Select your language"
     }
 }

@@ -74,6 +74,10 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+
+  showOtherLangs(): void {
+    document.querySelector('.dropdown-content')?.classList.toggle('d-block')
+  }
   
   reloadThePage(): void {
     this._router.navigateByUrl('/' + this.otherLang + '/home', {skipLocationChange: false}).then(() => {
