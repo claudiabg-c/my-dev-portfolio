@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common'
 
 import { DataService } from '../../services/data.service';
 
@@ -23,7 +24,9 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private _activeRouter: ActivatedRoute,
-    private _dataAPI: DataService
+    private _dataAPI: DataService,
+    public _location: Location,
+    public _router: Router
   ) {
     this._activeRouter.params.subscribe(params => {
       if (this.debug) {console.log('*** LOADING PARAMS...'); console.log(params);}
@@ -72,4 +75,9 @@ export class NavbarComponent implements OnInit {
     });
   }
   
+  reloadThePage(): void {
+    this._router.navigateByUrl('/' + this.otherLang + '/home', {skipLocationChange: false}).then(() => {
+      window.location.reload();
+    });
+  }
 }
