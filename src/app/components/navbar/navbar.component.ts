@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
   public lang: string = "";
   public otherLang: string = "";
   public selectLang: string = "";
+  public dataLang: any = [];
   public langData: any = [];
   public otherLangData: any = [];
 
@@ -68,6 +69,8 @@ export class NavbarComponent implements OnInit {
       this.langData = res[lang].language;
       this.otherLangData = res[this.otherLang].language;
       this.selectLang = res[lang].selectLang;
+      this.dataLang = res[lang];
+      
 
       if (this.debug) {
         console.log("****** LANG DATA: ", this.langData);
@@ -83,5 +86,9 @@ export class NavbarComponent implements OnInit {
     this._router.navigateByUrl('/' + this.otherLang + '/home', {skipLocationChange: false}).then(() => {
       window.location.reload();
     });
+  }
+
+  goToLink(url: string){
+    window.open(url, '_blank', 'location=yes,width=1000,height=700,scrollbars=yes,status=yes');
   }
 }

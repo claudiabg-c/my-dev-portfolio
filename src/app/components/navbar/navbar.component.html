@@ -2,22 +2,32 @@
     <div class="container-navbar">
         <div class="logo text-left">
             <a [routerLink]="['/' + lang + '/home']">
-                <img src="../../../assets/ui/images/logo.png" class="img-fluid" title="{{config.name}}" alt="{{config.name}}">
+                <img src="../../../assets/ui/images/logo.png" class="img-fluid" title="Logo {{config.name}}" alt="Logo {{config.name}}">
             </a>
         </div>
-        <div class="social-media language">
-            <a [href]="data.rrss_01" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a [href]="data.rrss_02" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <div class="dropdown">
-                <button class="dropbtn" [title]="selectLang" (click)="showOtherLangs()">
-                    <img [src]="langData.flag" alt="langData.name">
-                </button>
-                <div class="dropdown-content">
-                    <a (click)="reloadThePage()" [title]="otherLangData.name">
-                        <img [src]="otherLangData.flag" alt="otherLangData.name">
-                    </a>
+        <section class="navbar-sections">
+            <ol class="info">
+                <li><a [routerLink]="['/' + lang + '/about']">{{dataLang.about}}</a></li>
+                <li><a [routerLink]="['/' + lang + '/work']">{{dataLang.work}}</a></li>
+                <li><a [routerLink]="['/' + lang + '/contact']">{{dataLang.contact}}</a></li>
+            </ol>
+            <button class="resume" title="{{dataLang.view}} {{dataLang.resume}}" (click)="goToLink('../../../assets/documents/' + dataLang.resume + '_Claudia_Berrocal.pdf')">
+                <span>{{dataLang.resume}}</span>
+            </button>
+            <div class="social-media language">
+                <a [href]="data.rrss_01" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a [href]="data.rrss_02" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <div class="dropdown">
+                    <button class="dropbtn" [title]="selectLang" (click)="showOtherLangs()">
+                        <img [src]="langData.flag" alt="langData.name">
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="reloadThePage()" [title]="otherLangData.name">
+                            <img [src]="otherLangData.flag" alt="otherLangData.name">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </section>
