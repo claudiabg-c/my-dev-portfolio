@@ -1,1 +1,24 @@
 @import '../../../assets/ui/css/variables.scss';
+
+
+.header {
+    position: relative;
+    .header-info {
+        padding: 90px;
+        max-width: 300px;
+        .name {
+            text-transform: uppercase;
+            font-size: 90px;
+            padding-bottom: 30px;
+            border-bottom: 5px solid $color_4;
+        }
+        .job {
+            padding-top: 30px;
+        }
+    }
+    .header-img {
+        position: absolute;
+        top: 0;
+        right: 90px;
+    }
+}
