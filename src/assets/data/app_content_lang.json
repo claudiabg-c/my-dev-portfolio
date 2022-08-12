@@ -12,7 +12,9 @@
         "work": "Work",
         "contact": "Contact",
         "resume": "Resume",
-        "view": "View"
+        "view": "View",
+        "job": "Front-end developer",
+        "header_picture": "Header picture"
     },
     "es": {
         "language": {
@@ -27,6 +29,8 @@
         "work": "Trabajo",
         "contact": "Contacto",
         "resume": "Currículum",
-        "view": "Ver"
+        "view": "Ver",
+        "job": "Desarrolladora front-end",
+        "header_picture": "Foto de portada"
     }
 }
