@@ -43,9 +43,17 @@ export class IndexComponent implements OnInit {
 
   LoadPage(){
     if (this.debug){console.log('*** LOADING PAGE...');}
-    let langDefault = this.langs[0];
-    document.documentElement.lang = langDefault;
-    this._router.navigate([ '/' + langDefault + '/home']);
-    if (this.debug) {console.log("Redirected to: HOME PAGE (" + langDefault + ")");}
+    const userLang = navigator.language;
+    if (userLang.startsWith('es')) {
+      const langDefault = this.langs[1];
+      document.documentElement.lang = langDefault;
+      this._router.navigate([ '/' + langDefault + '/home']);
+      if (this.debug) {console.log("Redirected to: HOME PAGE (" + langDefault + ")");}
+    } else {
+      const langDefault = this.langs[0];
+      document.documentElement.lang = langDefault;
+      this._router.navigate([ '/' + langDefault + '/home']);
+      if (this.debug) {console.log("Redirected to: HOME PAGE (" + langDefault + ")");}
+    }
   }
 }
