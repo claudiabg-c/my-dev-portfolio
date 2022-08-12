@@ -20,6 +20,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { DataService } from './services/data.service';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     IndexComponent,
     LoaderComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
