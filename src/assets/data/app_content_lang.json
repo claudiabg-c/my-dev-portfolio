@@ -1,14 +1,4 @@
 {
-    "es": {
-        "language": {
-            "name": "Español",
-            "shortname": "ESP",
-            "code": "es",
-            "flag": "./assets/ui/images/spain_flag.png"
-        },
-        "loading": "Cargando página...",
-        "selectLang": "Selecciona tu idioma"
-    },
     "en": {
         "language": {
             "name": "English",
@@ -18,5 +8,15 @@
         },
         "loading": "Loading page...",
         "selectLang": "Select your language"
+    },
+    "es": {
+        "language": {
+            "name": "Español",
+            "shortname": "ESP",
+            "code": "es",
+            "flag": "./assets/ui/images/spain_flag.png"
+        },
+        "loading": "Cargando página...",
+        "selectLang": "Selecciona tu idioma"
     }
 }
