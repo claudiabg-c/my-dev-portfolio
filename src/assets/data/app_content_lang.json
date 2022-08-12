@@ -7,7 +7,12 @@
             "flag": "./assets/ui/images/uk_flag.png"
         },
         "loading": "Loading page...",
-        "selectLang": "Select your language"
+        "selectLang": "Select your language",
+        "about": "About",
+        "work": "Work",
+        "contact": "Contact",
+        "resume": "Resume",
+        "view": "View"
     },
     "es": {
         "language": {
@@ -17,6 +22,11 @@
             "flag": "./assets/ui/images/spain_flag.png"
         },
         "loading": "Cargando página...",
-        "selectLang": "Selecciona tu idioma"
+        "selectLang": "Selecciona tu idioma",
+        "about": "Sobre mí",
+        "work": "Trabajo",
+        "contact": "Contacto",
+        "resume": "Currículum",
+        "view": "Ver"
     }
 }
