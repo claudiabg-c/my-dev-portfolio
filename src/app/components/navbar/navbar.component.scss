@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
     .img-fluid {
         color: $color_1;
         margin: 10px;
@@ -18,11 +21,14 @@
     .navbar-sections {
         color: $color_2;
         display: flex;
+        background: transparent;
         .info {
             display: flex;
             list-style-type: decimal-leading-zero;
+            background: transparent;
             li {
                 padding: 4px 70px 5px 0;
+                background: transparent;
                 &:last-of-type {
                     padding-right: 30px;
                 }
@@ -33,6 +39,7 @@
                     color: $color_2;
                     border-bottom: 1px solid $color_2;
                     position: relative;
+                    background-color: transparent;
                     &::before {
                         content: '';
                         transform-origin: 100% 50%;
