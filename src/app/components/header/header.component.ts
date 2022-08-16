@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   public lang: string = "";
   public dataLang: any = [];
+  public header: any = [];
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -34,5 +35,9 @@ export class HeaderComponent implements OnInit {
     this._dataAPI.getContentLang().subscribe(res => {
       this.dataLang = res[lang];
     });
+  }
+  
+  addParallax():void {
+    this.header = document.querySelector('header');
   }
 }
