@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetDataLang(this.lang);
+    this.hideArrow();
   }
 
   GetDataLang(lang: string) {
@@ -40,4 +41,17 @@ export class HeaderComponent implements OnInit {
   addParallax():void {
     this.header = document.querySelector('header');
   }
+
+  hideArrow() {
+    const arrow = document.querySelector('.arrow-down')
+    const onScroll = () => {
+      const scroll = document.documentElement.scrollTop;
+      if (scroll > 0) {
+        arrow?.classList.add('scrolled');
+      } else {
+        arrow?.classList.remove('scrolled')
+      }
+    }
+    window.addEventListener('scroll', onScroll)
+  };
 }
