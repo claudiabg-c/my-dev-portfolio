@@ -38,6 +38,7 @@ export class NavbarComponent implements OnInit {
     this.GetConfig();
     this.GetData();
     this.GetDataLang(this.lang);
+    this.changeNavbarOpacity();
   }
 
   GetConfig(){
@@ -89,4 +90,17 @@ export class NavbarComponent implements OnInit {
   goToLink(url: string){
     window.open(url, '_blank', 'location=yes,width=1000,height=700,scrollbars=yes,status=yes');
   }
+
+  changeNavbarOpacity() {
+    const navbar = document.querySelector('.container-navbar')
+    const onScroll = () => {
+      const scroll = document.documentElement.scrollTop;
+      if (scroll > 0) {
+        navbar?.classList.add('scrolled');
+      } else {
+        navbar?.classList.remove('scrolled')
+      }
+    }
+    window.addEventListener('scroll', onScroll)
+  };
 }

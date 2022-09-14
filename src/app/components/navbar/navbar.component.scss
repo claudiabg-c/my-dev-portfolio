@@ -8,6 +8,11 @@
     position: fixed;
     z-index: 1;
     background-color: transparent;
+    transition: background-color .5s ease-in-out;
+    &.scrolled {
+        background-color: $color_3;
+        transition: all .5s ease-in-out;
+    }
     .img-fluid {
         color: $color_1;
         margin: 10px;
