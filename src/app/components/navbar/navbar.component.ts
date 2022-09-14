@@ -10,7 +10,7 @@ import { DataService } from '../../services/data.service';
 })
 export class NavbarComponent implements OnInit {
 
-  private debug: boolean = true;
+  private debug: boolean = false;
 
   public config: any = [];
   public data: any = [];
