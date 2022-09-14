@@ -87,6 +87,10 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
+  }
+
   goToLink(url: string){
     window.open(url, '_blank', 'location=yes,width=1000,height=700,scrollbars=yes,status=yes');
   }

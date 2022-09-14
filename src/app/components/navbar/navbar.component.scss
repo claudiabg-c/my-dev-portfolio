@@ -13,6 +13,10 @@
         background-color: $color_3;
         transition: all .5s ease-in-out;
     }
+    .logo {
+        cursor: pointer;
+        padding: 5px;
+    }
     .img-fluid {
         color: $color_1;
         margin: 10px;
