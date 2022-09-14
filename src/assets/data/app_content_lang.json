@@ -8,13 +8,14 @@
         },
         "loading": "Loading page...",
         "selectLang": "Select your language",
-        "about": "About",
+        "about": "About me",
         "work": "Work",
         "contact": "Contact",
         "resume": "Resume",
         "view": "View",
         "job": "Front-end developer",
-        "header_picture": "Header picture"
+        "header_picture": "Header picture",
+        "about_description": ""
     },
     "es": {
         "language": {
@@ -31,6 +32,7 @@
         "resume": "Currículum",
         "view": "Ver",
         "job": "Desarrolladora front-end",
-        "header_picture": "Foto de portada"
+        "header_picture": "Foto de portada",
+        "about_description": ""
     }
 }
