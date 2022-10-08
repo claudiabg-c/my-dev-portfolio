@@ -2,84 +2,110 @@
 
 .about {
     padding: 70px;
-    .timeline {
-        width: 50%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .plugin {
+        grid-column: 4/6;
+        grid-row: 1/3;
+        margin: 50px 100px;
+        align-self: center;
+        background-color: $color_4;
+        line-height: 0;
+        border-radius: 10px;
+        iframe {
+            opacity: 0.5;
+            filter: grayscale(1);
+            border: 5px solid $color_2;
+            border-radius: 10px;
+        }
+    }
+    .about-me-info {
+        grid-column: 1/4;
+        font-family: 'Uchen-Regular';
         .title {
-            h1 {
-                color: $color_1;
-                font-weight: normal;
-                font-size: 28px;
-                text-transform: uppercase;
-            }
+            color: $color_2;
+            margin: 150px 20px 20px;
         }
-        .timeline-professions {
+        .description {
+            margin: 40px;
+            text-align: justify;
+        }
+    }
+    .timeline {
+        grid-column: 1/4;
+        width: 80%;
+        margin: 30px;
+        .title {
+            color: $color_2;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 10px;
+        }
+        ul {
             display: grid;
             grid-template-columns: repeat(4, 1fr) repeat(3, 2fr);
             position: relative;
-            height: 150px;
-            li {
-                position: absolute;
-                width: 100%;
-                border-bottom: 5px solid;
-                padding-bottom: 5px;
-                h3 {
-                    font-size: 12px;
-                }
-                h4 {
-                    font-size: 15px;
-                }
-                &.lawyer {
-                    grid-column: 1/5;
-                    bottom: 0;
-                    border-color: $color_4;
-                }
-                &.teacher {
-                    grid-column: 5/6;
-                    bottom: 20px;
-                    border-color: $color_5;
-                }
-                &.developer {
-                    grid-column: 6/8;
-                    top: 0;
-                    border-color: $color_2;
-                }
-            }
-        }
-        .timeline-experience {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr) repeat(3, 2fr);
-            position: relative;
-            li {
-                position: absolute;
-                border-bottom: 3px solid;
-                padding-bottom: 5px;
-                h5 {
-                    font-size: 11px;
-                }
-                h6 {
-                    font-size: 10px;
-                }
-                &.bootcamp {
-                    grid-column: 6/7;
-                    width: 50%;
-                    bottom: 40px;
-                    border-color: $color_6;
-                }
-                &.job {
-                    grid-column: 7/8;
-                    width: 150%;
-                    left: -50%;
-                    bottom: 60px;
-                    border-color: $color_7;
+            &.timeline-professions {
+                height: 150px;
+                li {
+                    position: absolute;
+                    width: 100%;
+                    border-bottom: 5px solid;
+                    padding-bottom: 5px;
+                    h3 {
+                        font-size: 12px;
+                    }
+                    h4 {
+                        font-size: 15px;
+                    }
+                    &.lawyer {
+                        grid-column: 1/5;
+                        bottom: 0;
+                        border-color: $color_4;
+                    }
+                    &.teacher {
+                        grid-column: 5/6;
+                        bottom: 20px;
+                        border-color: $color_5;
+                    }
+                    &.developer {
+                        grid-column: 6/8;
+                        top: 0;
+                        border-color: $color_2;
+                    }
                 }
             }
-        }
-        .timeline-years {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr) repeat(3, 2fr);
-            border-top: 1px solid $color_1;
-            text-align: center;
-            margin-top: 5px;
+            &.timeline-experience {
+                li {
+                    position: absolute;
+                    border-bottom: 3px solid;
+                    padding-bottom: 3px;
+                    h5 {
+                        font-size: 11px;
+                    }
+                    h6 {
+                        font-size: 12px;
+                    }
+                    &.bootcamp {
+                        grid-column: 6/7;
+                        width: 50%;
+                        bottom: 40px;
+                        border-color: $color_6;
+                    }
+                    &.job {
+                        grid-column: 7/8;
+                        width: 150%;
+                        left: -50%;
+                        bottom: 60px;
+                        border-color: $color_7;
+                    }
+                }
+            }
+            &.timeline-years {
+                border-top: 1px solid $color_1;
+                text-align: center;
+                margin-top: 5px;
+            }
         }
     }
 }
