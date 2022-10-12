@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
+import { WorkComponent } from './components/work/work.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     NavbarComponent,
     HeaderComponent,
-    AboutComponent
+    AboutComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
