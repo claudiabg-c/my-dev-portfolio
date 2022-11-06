@@ -14,6 +14,7 @@ export class AboutComponent implements OnInit {
 
   public lang: string = "";
   public dataLang: any = [];
+  public data: any = [];
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -27,6 +28,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetDataLang(this.lang);
+    this.GetData();
   }
 
   GetDataLang(lang: string) {
@@ -35,4 +37,12 @@ export class AboutComponent implements OnInit {
     });
   }
 
+  GetData(){
+    this._dataAPI.getContent().subscribe(res => {
+      this.data = res[this.lang];
+      if (this.debug) {
+        console.log("****** DATA: ", this.data);
+      }
+    });
+  }
 }
