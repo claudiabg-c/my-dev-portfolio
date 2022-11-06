@@ -1,10 +1,134 @@
 {
     "en": {
         "rrss_01": "https://www.linkedin.com/in/claudia-berrocal/?locale=en_US",
-        "rrss_02": "https://github.com/claudiabg-c"
+        "rrss_02": "https://github.com/claudiabg-c",
+
+        "about_description": "Hi, I'm Claudia! I am a hard working, multidisciplinary and detail-oriented web developer who is always trying to improve and learn new things. Most of my work as a developer has been in the ​​front end area (client side). For my projects I like to use technologies such as Javascript, Angular, HTML and Sass. I also have knowledge of full stack development, but I haven't had the opportunity to work much in the back end area yet. I like organization and keeping track of processes. I am very methodical and I find project and people management interesting. Now in a more personal sense, I love reading, movies and videogames. I also enjoy a lot playing board games and solving puzzles. Right now I live in Spain but I'm not tied up here, so sometimes I even consider living somewhere else for a while. And I am always open to new ideas, new challenges and new job opportunities!",
+
+        "projects":
+            [
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Create interactive business cards web app",
+                    "description": "",
+                    "image": "",
+                    "role": "Developer",
+                    "technologies": "HTML, Sass, React and NodeJs",
+                    "year": "2022"
+                },
+                {
+                    "title": "Hangman game",
+                    "description": "",
+                    "image": "",
+                    "role": "Developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Anime search engine",
+                    "description": "",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and Javascript",
+                    "year": "2021"
+                },
+                {
+                    "title": "Layout landing page",
+                    "description": "",
+                    "image": "",
+                    "role": "Developer",
+                    "technologies": "HTML and Sass",
+                    "year": "2021"
+                },
+                {
+                    "title": "Project team presentation web page",
+                    "description": "",
+                    "image": "",
+                    "role": "Developer",
+                    "technologies": "HTML and Sass",
+                    "year": "2021"
+                },
+                {
+                    "title": "Rock, paper scissors game",
+                    "description": "",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and Javascript",
+                    "year": "2021"
+                }
+            ]
     },
     "es": {
         "rrss_01": "https://www.linkedin.com/in/claudia-berrocal/",
-        "rrss_02": "https://github.com/claudiabg-c"
+        "rrss_02": "https://github.com/claudiabg-c",
+
+        "about_description": "¡Hola, soy Claudia! Soy una desarrolladora web bastante trabajadora, multidisciplinar y con gran atención al detalle que siempre está intentando aprender nuevas cosas. La mayor parte de mi trabajo como programadora ha sido en el área del desarrollo front end (del lado del cliente). Para mis proyectos me gusta utilizar sobre todo tecnologías como Javascript, Angular, HTML y Sass. También tengo conocimiento de desarrollo full stack, pero aún no he tenido la oportunidad de desenvolverme mucho en el área de back. Me gusta la organización y llevar un control de procesos. Soy muy metódica y los temas de gestión de proyectos y personas me parecen interesantes. Ahora en un sentido ya más personal, me encanta leer, las películas y los videojuegos. También me gusta mucho jugar a juegos de mesa y los puzzles. Actualmente vivo en España pero nada me ata aquí, por lo que a veces me llego a plantear vivir en algún otro lugar durante un tiempo. ¡Y siempre estoy abierta a nuevas ideas y nuevos retos y oportunidades laborales!",
+
+        "projects": 
+            [
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                },
+                {
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
+                }
+            ]
     }
 }

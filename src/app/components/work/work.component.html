@@ -1,12 +1,12 @@
 <section class="work" id="work">
-    <article class="project-container">
-        <h1 class="title"></h1>
-        <p class="description"></p>
+    <article class="project-container" *ngFor="let project of projects; let i = index;">
+        <h1 class="title">{{project.title}}</h1>
+        <p class="description">{{project.description}}</p>
         <img src="" alt="">
         <ul class="other-info">
-            <li class="role"></li>
-            <li class="technologies"></li>
-            <li class="year"></li>
+            <li class="role">{{project.role}}</li>
+            <li class="technologies">{{project.technologies}}</li>
+            <li class="year">{{project.year}}</li>
         </ul>
     </article>
     <div class="project-count"></div>
