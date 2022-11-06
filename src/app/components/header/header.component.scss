@@ -18,6 +18,7 @@
             padding-bottom: 30px;
             border-bottom: 5px solid $color_4;
             background-color: transparent;
+            z-index: 1;
         }
         .job {
             padding-top: 30px;
@@ -31,7 +32,8 @@
         width: 60vw;
         z-index: 0;
         display: inline-block;
-        background-color: $color_1;
+        background-color: $background_color;
+        height: 100%;
     }
     .arrow-down {
         cursor: pointer;
