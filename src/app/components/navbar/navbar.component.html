@@ -6,9 +6,9 @@
     </div>
     <section class="navbar-sections">
         <ol class="info">
-            <li><a href="#about-me">{{dataLang.about}}</a></li>
-            <li><a href="#work">{{dataLang.work}}</a></li>
-            <li><a href="#contact">{{dataLang.contact}}</a></li>
+            <li><a (click)="goToAboutMe()">{{dataLang.about}}</a></li>
+            <li><a (click)="goToWork()">{{dataLang.work}}</a></li>
+            <li><a (click)="goToContact()">{{dataLang.contact}}</a></li>
         </ol>
         <button class="resume" title="{{dataLang.view}} {{dataLang.resume}}" (click)="goToLink('../../../assets/documents/' + dataLang.resume + '_Claudia_Berrocal.pdf')">
             <span>{{dataLang.resume}}</span>

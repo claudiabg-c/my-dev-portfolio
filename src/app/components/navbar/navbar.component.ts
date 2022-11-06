@@ -80,6 +80,27 @@ export class NavbarComponent implements OnInit {
   showOtherLangs(): void {
     document.querySelector('.dropdown-content')?.classList.toggle('d-block')
   }
+
+  goToAboutMe(): void {
+    const aboutMe = document.getElementById('about-me');
+    aboutMe?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
+  goToWork(): void {
+    const work = document.getElementById('work');
+    work?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
+  goToContact(): void {
+    const contact = document.getElementById('contact');
+    contact?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
   
   reloadThePage(): void {
     this._router.navigateByUrl('/' + this.otherLang + '/home', {skipLocationChange: false}).then(() => {
