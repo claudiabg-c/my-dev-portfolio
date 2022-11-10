@@ -12,13 +12,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 1;
         .name {
             text-transform: uppercase;
             font-size: 90px;
             padding-bottom: 30px;
             border-bottom: 5px solid $color_4;
             background-color: transparent;
-            z-index: 1;
         }
         .job {
             padding-top: 30px;
@@ -27,13 +27,17 @@
     }
     .header-img {
         position: absolute;
-        bottom: -100px;
         right: 40px;
         width: 60vw;
         z-index: 0;
         display: inline-block;
         background-color: $background_color;
         height: 100%;
+        top: 0;
+        .header-picture {
+            height: 100%;
+            width: 100%;
+        }
     }
     .arrow-down {
         cursor: pointer;
