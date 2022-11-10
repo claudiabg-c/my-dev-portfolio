@@ -2,7 +2,7 @@
     <article class="project-container" *ngFor="let project of projects; let i = index;">
         <h1 class="title">{{project.title}}</h1>
         <p class="description">{{project.description}}</p>
-        <img src="" alt="">
+        <img class="project-image" src="{{project.image}}">
         <ul class="other-info">
             <li class="role">{{project.role}}</li>
             <li class="technologies">{{project.technologies}}</li>

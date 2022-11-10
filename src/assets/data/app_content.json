@@ -10,7 +10,7 @@
                 {
                     "title": "Harry Potter characters' search page",
                     "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
-                    "image": "",
+                    "image": "../../../assets/ui/images/harry_potter.png",
                     "role": "Designer and developer",
                     "technologies": "HTML, Sass and React",
                     "year": "2022"
