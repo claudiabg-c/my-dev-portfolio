@@ -17,7 +17,7 @@
                 },
                 {
                     "title": "Create interactive business cards web app",
-                    "description": "",
+                    "description": "This was a group project that I did while I was learning React and NodeJs. It is a responsive web app where you can create your ouwn interactive business cards, choose the colors and post them on your social media.",
                     "image": "",
                     "role": "Developer",
                     "technologies": "HTML, Sass, React and NodeJs",
@@ -25,7 +25,7 @@
                 },
                 {
                     "title": "Hangman game",
-                    "description": "",
+                    "description": "This was a group project of the popular Hangman game that I created while I was learning React.",
                     "image": "",
                     "role": "Developer",
                     "technologies": "HTML, Sass and React",
@@ -33,7 +33,7 @@
                 },
                 {
                     "title": "Anime search engine",
-                    "description": "",
+                    "description": "This is a responsive web app where you can find animes and add them to a favourites list that will be saved in your browser. I got the animes from a public API.",
                     "image": "",
                     "role": "Designer and developer",
                     "technologies": "HTML, Sass and Javascript",
@@ -41,7 +41,7 @@
                 },
                 {
                     "title": "Layout landing page",
-                    "description": "",
+                    "description": "This is a responsive web landing page built with Html and Sass from a previously given design.",
                     "image": "",
                     "role": "Developer",
                     "technologies": "HTML and Sass",
@@ -49,7 +49,7 @@
                 },
                 {
                     "title": "Project team presentation web page",
-                    "description": "",
+                    "description": "This was a group project that I did while I was learning Html and Sass. It is a responsive web page where you can see the members of a developers' team and contact them.",
                     "image": "",
                     "role": "Developer",
                     "technologies": "HTML and Sass",
@@ -57,7 +57,7 @@
                 },
                 {
                     "title": "Rock, paper scissors game",
-                    "description": "",
+                    "description": "This is a responsive web app where you can play the famous rock, paper, scissors game and get a cute little gif everytime you win, loose or tie.",
                     "image": "",
                     "role": "Designer and developer",
                     "technologies": "HTML, Sass and Javascript",
@@ -74,60 +74,60 @@
         "projects": 
             [
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Buscador de personajes de Harry Potter",
+                    "description": "Se trata de una web responsive en la que puedes buscar personajes de Harry Potter y obtener algo de información básica sobre ellos. Los datos están sacados de una API pública y el diseño es interactivo y cambia conforme a los colores de las casas de Hogwarts.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y React",
                     "year": "2022"
                 },
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Creador de tarjetas de visita",
+                    "description": "Este fue un proyecto grupal desarrollado mientras aprendía React y NodeJs. Se trata de una aplicación web responsive en la que puedes crear tu propia tarjeta de visita profesional de manera dinámica, eligiendo los colores y la información así como posteándola en las redes sociales en caso de querer hacerlo.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
+                    "role": "Desarrolladora",
+                    "technologies": "HTML, Sass, React y NodeJs",
                     "year": "2022"
                 },
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Hangman game",
+                    "description": "Este fue un proyecto grupal del popular juego del ahorcado desarrollado mientras aprendía React.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
+                    "role": "Desarrolladora",
+                    "technologies": "HTML, Sass y React",
                     "year": "2022"
                 },
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Buscador de anime",
+                    "description": "Esta es una aplicación web en la que puedes buscar animes obtenidos de una API pública y añadirlos a una lista de favoritos. Además esa lista de favoritos se queda guardada en el navegador para que esté disponible la próxima vez que entres a la página.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
-                    "year": "2022"
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y Javascript",
+                    "year": "2021"
                 },
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Maquetación de una página de landing",
+                    "description": "Se trata de la maquetación de una página de landing hecha con HTML y Sass en base a un diseño previamente dado.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
-                    "year": "2022"
+                    "role": "Desarrolladora",
+                    "technologies": "HTML y Sass",
+                    "year": "2021"
                 },
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Página web presentación de equipo de proyecto",
+                    "description": "Esto fue parte de un trabajo en grupo hecho para aprender a construir una página web con HTML y Sass. Se trata de una página responsive donde se hace una introducción a los miembros del equipo en la que además se da un formulario para ponerse en contacto con dichos miembros.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
-                    "year": "2022"
+                    "role": "Desarrolladora",
+                    "technologies": "HTML y Sass",
+                    "year": "2021"
                 },
                 {
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "title": "Piedra, papel o tijera",
+                    "description": "Esta es una aplicación web responsive en la que se puede jugar al famoso \"Piedra, papel o tijera\" y al final se obtiene un gif divertido dependiendo de si se gana, se pierde o se empata.",
                     "image": "",
-                    "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
-                    "year": "2022"
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y Javascript",
+                    "year": "2021"
                 }
             ]
     }
