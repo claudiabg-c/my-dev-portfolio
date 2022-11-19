@@ -34,7 +34,7 @@
                 {
                     "title": "Anime search engine",
                     "description": "This is a responsive web app where you can find animes and add them to a favourites list that will be saved in your browser. I got the animes from a public API.",
-                    "image": "",
+                    "image": "../../../assets/ui/images/anime.png",
                     "role": "Designer and developer",
                     "technologies": "HTML, Sass and Javascript",
                     "year": "2021"
@@ -76,7 +76,7 @@
                 {
                     "title": "Buscador de personajes de Harry Potter",
                     "description": "Se trata de una web responsive en la que puedes buscar personajes de Harry Potter y obtener algo de información básica sobre ellos. Los datos están sacados de una API pública y el diseño es interactivo y cambia conforme a los colores de las casas de Hogwarts.",
-                    "image": "",
+                    "image": "../../../assets/ui/images/harry_potter.png",
                     "role": "Diseñadora y desarrolladora",
                     "technologies": "HTML, Sass y React",
                     "year": "2022"
@@ -100,7 +100,7 @@
                 {
                     "title": "Buscador de anime",
                     "description": "Esta es una aplicación web en la que puedes buscar animes obtenidos de una API pública y añadirlos a una lista de favoritos. Además esa lista de favoritos se queda guardada en el navegador para que esté disponible la próxima vez que entres a la página.",
-                    "image": "",
+                    "image": "../../../assets/ui/images/anime.png",
                     "role": "Diseñadora y desarrolladora",
                     "technologies": "HTML, Sass y Javascript",
                     "year": "2021"
