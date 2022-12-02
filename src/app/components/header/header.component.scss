@@ -34,9 +34,36 @@
         background-color: $background_color;
         height: 100%;
         top: 0;
-        .header-picture {
-            height: 100%;
-            width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .first-layer {
+            height: 800px;
+            min-width: 800px;
+            background: radial-gradient(circle 520px, $color_4 70%, $color_3 75%);
+            .second-layer {
+                height: 600px;
+                width: 600px;
+                background: radial-gradient(circle 400px, $color_5 70%, $color_4 75%);
+                .third-layer {
+                    height: 450px;
+                    width: 450px;
+                    background: radial-gradient(circle 300px, $color_7 70%, $color_5 75%);
+                    .header-picture {
+                        height: 300px;
+                        width: 300px;
+                        border-radius: 50%;
+                        mix-blend-mode: multiply;
+                        filter: grayscale(10%);
+                    }
+                }
+            }
         }
     }
     .arrow-down {
