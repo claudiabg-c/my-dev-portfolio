@@ -55,12 +55,18 @@
                     height: 450px;
                     width: 450px;
                     background: radial-gradient(circle 300px, $color_7 70%, $color_5 75%);
-                    .header-picture {
+                    .fourth-layer {
                         height: 300px;
                         width: 300px;
-                        border-radius: 50%;
-                        mix-blend-mode: multiply;
-                        filter: grayscale(10%);
+                        background-color: $color_4;
+                        .header-picture {
+                            height: 300px;
+                            width: 300px;
+                            border-radius: 50%;
+                            mix-blend-mode: hard-light;
+                            filter: grayscale(30%);
+                            object-fit: cover;
+                        }
                     }
                 }
             }

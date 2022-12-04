@@ -49,6 +49,7 @@
                     border-bottom: 1px solid $color_2;
                     position: relative;
                     background-color: transparent;
+                    cursor: pointer;
                     &::before {
                         content: '';
                         transform-origin: 100% 50%;
