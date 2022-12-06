@@ -19,7 +19,11 @@
         "header_picture": "Header picture",
         "timeline": "Timeline",
         "now": "Now",
-        "technologies": "The technologies I use..."
+        "technologies": "The technologies I use...",
+        "role": "Role",
+        "technologie": "Technologies",
+        "year": "Year",
+        "next": "Next"
     },
     "es": {
         "language": {
@@ -41,6 +45,10 @@
         "header_picture": "Foto de portada",
         "timeline": "Línea del tiempo",
         "now": "Actualidad",
-        "technologies": "Las tecnologías que uso..."
+        "technologies": "Las tecnologías que uso...",
+        "role": "Rol",
+        "technologie": "Teconologías",
+        "year": "Año",
+        "next": "Siguiente"
     }
 }
