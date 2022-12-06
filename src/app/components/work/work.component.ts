@@ -12,7 +12,8 @@ export class WorkComponent implements OnInit {
   private debug: boolean = true;
 
   public lang: string = '';
-  public projectId: string = '';
+  public dataLang: any = [];
+  public projectId: number = 0;
   public projectsIndex: any = [];
   public projects: any = [];
 
@@ -28,6 +29,7 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
     this.GetIndex();
     this.GetData();
+    this.GetDataLang(this.lang);
   }
 
   GetIndex() {
@@ -45,13 +47,19 @@ export class WorkComponent implements OnInit {
     if (this.debug) {console.log('*** LOADING DATA...');}
     this._dataAPI.getContent().subscribe(res => {
       this.projects = res[this.lang].projects;
-      if (this.debug) {
-        console.log("****** DATA: ", this.projects);
-      }
       for (let i = 0; i < this.projectsIndex.length; i++) {
-        this.projectId = '"' + i+1 + '"';
+        this.projectId = i+1;
+        this.projects[i]['id'] = this.projectId;
+        if (this.debug) {
+          console.log("****** EACH PROJECT DATA: ", this.projects[i]);
+        }
       }
+    });
+  }
 
+  GetDataLang(lang: string) {
+    this._dataAPI.getContentLang().subscribe(res => {
+      this.dataLang = res[lang];
     });
   }
 }
