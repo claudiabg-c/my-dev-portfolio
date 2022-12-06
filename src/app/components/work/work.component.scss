@@ -3,8 +3,8 @@
 #work {
     padding-top: 100px;
     .project-container {
-        height: calc(100vh - 200px);
-        margin: 50px 100px 100px;
+        height: calc(100vh - 230px);
+        margin: 50px 100px 150px;
         border: solid 2px $color_4;
         padding: 80px;
         display: grid;
@@ -20,9 +20,13 @@
             width: 100%;
         }
         .title {
+            font-size: 50px;
             font-family: 'Uchen-Regular';
             grid-row: 2/3;
             color: $color_2;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+            border-bottom: 5px solid $color_4;
         }
         .description {
             grid-row: 3/4;
