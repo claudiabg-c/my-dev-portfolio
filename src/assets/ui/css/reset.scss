@@ -53,6 +53,7 @@ button {
 	&:hover, &:hover span {
 		background-color: $color_2;
 		color: $color_3;
+		transition: all 0.25s cubic-bezier(.08,.93,.83,.67);
 	}
 }
 
