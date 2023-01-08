@@ -1,0 +1,49 @@
+@import '../../../assets/ui/css/variables.scss';
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient($color_3, $color_4);
+    opacity: .5;
+    padding: 90px 90px 0;
+    .email-container {
+        align-self: baseline;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $color_5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .first-layer {
+            border-radius: 50%;
+            height: 125px;
+            width: 125px;
+            background-color: $color_6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .second-layer {
+                height: 50px;
+                width: 50px;
+                background-color: $color_7;
+                border-radius: 50%;
+            }
+        }
+        .email {
+            position: absolute;
+            text-align: center;
+            align-self: center;
+            background-color: transparent;
+            top: 45%;
+            left: 50%;
+        }
+    }
+    .copy {
+        font-size: 12px;
+        background-color: transparent;
+    }
+}
