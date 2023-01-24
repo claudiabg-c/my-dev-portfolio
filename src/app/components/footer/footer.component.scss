@@ -9,8 +9,8 @@
     padding: 90px 90px 0;
     .email-container {
         align-self: baseline;
-        width: 200px;
-        height: 200px;
+        width: 75px;
+        height: 75px;
         border-radius: 50%;
         background-color: $color_5;
         display: flex;
@@ -19,15 +19,15 @@
         position: relative;
         .first-layer {
             border-radius: 50%;
-            height: 125px;
-            width: 125px;
+            height: 50px;
+            width: 50px;
             background-color: $color_6;
             display: flex;
             justify-content: center;
             align-items: center;
             .second-layer {
-                height: 50px;
-                width: 50px;
+                height: 25px;
+                width: 25px;
                 background-color: $color_7;
                 border-radius: 50%;
                 .email {
@@ -35,8 +35,8 @@
                     text-align: center;
                     align-self: center;
                     background-color: transparent;
-                    top: 45%;
-                    left: 50%;
+                    top: 38%;
+                    left: 120%
                 }
             }
         }
