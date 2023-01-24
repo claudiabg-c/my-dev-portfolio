@@ -111,3 +111,41 @@
     50% { transform: scale(.8); opacity: .4;}
     100% { transform: scale(1); }
 }
+
+@media screen and (max-width: 1024px) {
+    .header {
+        .header-info {
+            padding: 50px;
+            max-width: 80vw;
+            .name {
+                font-size: 60px;
+            }
+        }
+        .header-img {
+            right: 0;
+            width: 100vw;
+            justify-content: flex-end;
+            padding-right: 50px;
+            .first-layer {
+                height: 500px;
+                min-width: 500px;
+                .second-layer {
+                    height: 400px;
+                    width: 400px;
+                    .third-layer {
+                        height: 300px;
+                        width: 300px;
+                        .fourth-layer {
+                            height: 200px;
+                            width: 200px;
+                            .header-picture {
+                                height: 200px;
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
