@@ -168,3 +168,30 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .about {
+        grid-template-columns: repeat(3, 1fr); 
+        justify-items: center;
+        .technologies {
+            grid-column: 1/4;
+            grid-row: 3/4;
+            align-self: center;
+            padding: 90px 0 0;
+            .technologies-image {
+                width: 70%;
+                margin: auto;
+            }
+        }
+        .about-me-info {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+        .timeline {
+            grid-column: 1/4;
+            width: 100%;
+            margin: 30px;
+            padding: 60px 0 0;
+        }
+    }
+}
