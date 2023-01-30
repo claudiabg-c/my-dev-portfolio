@@ -150,3 +150,49 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column-reverse;
+        .header-info {
+            padding: 50px;
+            width: 50%;
+            .name {
+                font-size: 40px;
+                max-width: 100%;
+            }
+        }
+        .header-img {
+            right: 0;
+            width: 100vw;
+            justify-content: flex-end;
+            padding-right: 50px;
+            .first-layer {
+                height: 300px;
+                min-width: 300px;
+                .second-layer {
+                    height: 250px;
+                    width: 250px;
+                    .third-layer {
+                        height: 200px;
+                        width: 200px;
+                        .fourth-layer {
+                            height: 150px;
+                            width: 150px;
+                            .header-picture {
+                                height: 100px;
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .arrow-down {
+            display: none;
+        }
+    }
+}

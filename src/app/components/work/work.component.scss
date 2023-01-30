@@ -116,3 +116,46 @@
         }
     }
 }
+
+//add media query for mobile
+
+@media screen and (max-width: 768px) {
+    #work {
+        .each-project {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0 50px 50px;
+            padding: 50px;
+            .title, .description, .other-info, .project-count {
+                grid-column: 1/2;
+            }
+            .title {
+                grid-row: 1/2;
+                padding-bottom: 10px;
+            }
+            .description {
+                grid-row: 2/5;
+                font-size: 14px;
+            }
+            .project-image {
+                grid-column: 1/2;
+                grid-row: 5/6;
+                max-width: 100%;
+                max-height: 70%;
+                right: 0;
+                position: relative;
+                padding: 0;
+            }
+            .other-info {
+                grid-row: 7/8;
+                grid-column: 1/2;
+                .role, .technologies, .year {
+                    font-size: 12px;
+                }
+            }
+            .next {
+                grid-column: 1/2;
+                font-size: 16px;
+            }
+        }
+    }
+}
