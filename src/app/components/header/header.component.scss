@@ -196,3 +196,16 @@
         }
     }
 }
+
+@media screen and (max-width: 425px) {
+    .header {
+        .header-info {
+            padding: 50px;
+            width: 100%;
+            .name {
+                font-size: 30px;
+                max-width: 100%;
+            }
+        }
+    }
+}
