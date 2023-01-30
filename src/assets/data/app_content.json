@@ -90,7 +90,7 @@
                     "year": "2022"
                 },
                 {
-                    "title": "Hangman game",
+                    "title": "Juego del ahorcado",
                     "description": "Este fue un proyecto grupal del popular juego del ahorcado desarrollado mientras aprendía React.",
                     "image": "../../../assets/ui/images/hangman.png",
                     "role": "Desarrolladora",

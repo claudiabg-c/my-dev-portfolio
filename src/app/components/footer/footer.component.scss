@@ -46,3 +46,26 @@
         background-color: transparent;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .contact-me {
+        padding: 90px 0 0;
+        .email-container {
+            width: 50px;
+            height: 50px;
+            margin: 0 50px;
+            .first-layer {
+                height: 30px;
+                width: 30px;
+                .second-layer {
+                    height: 15px;
+                    width: 15px;
+                    .email {
+                        top: 40%;
+                        left: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
