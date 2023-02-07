@@ -1,7 +1,7 @@
 <section class="container-navbar">
     <div class="logo text-left">
         <a [routerLink]="['/' + lang + '/home']" (click)="scrollToTop()">
-            <img src="../../../assets/ui/images/logo.png" class="img-fluid" title="Logo {{config.name}}" alt="Logo {{config.name}}">
+            <img src="./assets/ui/images/logo.png" class="img-fluid" title="Logo {{config.name}}" alt="Logo {{config.name}}">
         </a>
     </div>
     <section class="navbar-sections">
@@ -10,7 +10,7 @@
             <li><a (click)="goToWork()">{{dataLang.work}}</a></li>
             <li><a (click)="goToContact()">{{dataLang.contact}}</a></li>
         </ol>
-        <button class="resume" title="{{dataLang.view}} {{dataLang.resume}}" (click)="goToLink('../../../assets/documents/' + dataLang.resume + '_Claudia_Berrocal.pdf')">
+        <button class="resume" title="{{dataLang.view}} {{dataLang.resume}}" (click)="goToLink('./assets/documents/' + dataLang.resume + '_Claudia_Berrocal.pdf')">
             <span>{{dataLang.resume}}</span>
         </button>
         <div class="social-media language">
