@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Uchen-Regular';
+  src: url('../typo/Uchen-Regular.eot');
+  src: url('../typo/Uchen-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../typo/Uchen-Regular.svg#Uchen-Regular') format('svg'),
+       url('../typo/Uchen-Regular.ttf') format('truetype'),
+       url('../typo/Uchen-Regular.woff') format('woff'),
+       url('../typo/Uchen-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Mono-Regular';
+  src: url('../typo/RobotoMono-Regular.eot');
+  src: url('../typo/RobotoMono-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../typo/RobotoMono-Regular.woff2') format('woff2'),
+      url('../typo/RobotoMono-Regular.woff') format('woff'),
+      url('../typo/RobotoMono-Regular.ttf') format('truetype'),
+      url('../typo/RobotoMono-Regular.svg#RobotoMono-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
