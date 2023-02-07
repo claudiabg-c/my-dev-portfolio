@@ -1,27 +1,23 @@
-# MyDevPortfolio
+# My developer portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
+This a web page for you, to get an idea of my past experience and the projects I've been working on in the past.
 
-## Development server
+This portfolios has been generated with Angular v 13.3.4. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I chose this specific framework because I was using it in my work place and I wanted to practice it since that was the only way I had to learn more and more about it and apply everything I learned from it on my work projects. 
 
-## Code scaffolding
+I also used Sass and Html.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The page is using two languages, spanish and english, and depending on your location the page loads in one language or the other. This was a big challenge to me because I really wanted to approach as many people as I could but I didn't know how to accomplish that location language tracking on my page. But I succeded after all.
 
-## Build
+## How to view the project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Simply click on the link provided on the "about" section on the top right of the screen and you can enjoy the web in any device you choose.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## I hope you enjoy the ride!
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<div align="center">
+<img src="https://media.tenor.com/5LT51B0DSIoAAAAC/funny-animals-dog.gif" alt="harry potter gif" width="300">
+</div>
