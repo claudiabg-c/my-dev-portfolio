@@ -224,7 +224,7 @@
 @media screen and (max-width: 425px) {
     .about {
         grid-template-columns: 1fr;
-        padding: 30px;
+        padding: 30px 20px;
         .technologies {
             padding: 60px 0 0;
             .technologies-image {
@@ -235,11 +235,12 @@
             grid-column: 1/2;
             grid-row: 1/2;
             .title-info {
-                margin: 20px;
+                margin: 0;
             }
             .description {
-                margin: 20px;
+                margin: 0;
                 font-size: 14px;
+                text-align: left;
             }
         }
         .timeline {

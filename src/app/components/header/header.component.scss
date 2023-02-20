@@ -200,11 +200,14 @@
 @media screen and (max-width: 425px) {
     .header {
         .header-info {
-            padding: 50px;
+            padding: 50px 20px 30px;
             width: 100%;
             .name {
                 font-size: 30px;
                 max-width: 100%;
+            }
+            .job {
+                max-width: 50%;
             }
         }
         .header-img {
