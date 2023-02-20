@@ -24,18 +24,24 @@ This is the aprox view you will get depending on the device:
 
 For PC:
 
-<div align="left"><img width=80% src="src/assets/ui/images/pc_header_about.png"></div>
-<div align="left"><img width=80% src="src/assets/ui/images/pc_projects.png"></div>
+<p float="left">
+  <img width=40% src="src/assets/ui/images/pc_header_about.png">
+  <img width=40% src="src/assets/ui/images/pc_projects.png">
+</p>
 
 For tablet:
 
-<div align="left"><img width=80% src="src/assets/ui/images/tablet_header.png"></div>
-<div align="left"><img width=80% src="src/assets/ui/images/tablet_projects.png"></div>
+<p float="left">
+  <img width=40% src="src/assets/ui/images/tablet_header.png">
+  <img width=40% src="src/assets/ui/images/tablet_projects.png">
+</p>
 
 For mobile:
 
-<div align="left"><img width=80% src="src/assets/ui/images/mobile_header.png"></div>
-<div align="left"><img width=80% src="src/assets/ui/images/mobile_projects.png"></div>
+<p float="left">
+  <img width=40% src="src/assets/ui/images/mobile_header.png">
+  <img width=40% src="src/assets/ui/images/mobile_projects.png">
+</p>
 
 ---
 
