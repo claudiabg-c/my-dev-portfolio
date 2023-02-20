@@ -14,6 +14,29 @@ The page is using two languages, spanish and english, and depending on your navi
 
 Simply click on the link provided on the "about" section on the top right of the screen and you can see the web in any device of your choice
 
+## Responsive design
+
+As I just said, you can view the project in any device that you prefer. This is thanks to its responsive design that allows you to see everything correctly anywhere, any time.
+
+Just in case you feel the urge to enjoy my web page and you don't have a PC around.
+
+This is the aprox view you will get depending on the device:
+
+For PC:
+
+<div align="left"><img width=80% src="src/assets/ui/images/pc_header_about.png"></div>
+<div align="left"><img width=80% src="src/assets/ui/images/pc_projects.png"></div>
+
+For tablet:
+
+<div align="left"><img width=80% src="src/assets/ui/images/tablet_header.png"></div>
+<div align="left"><img width=80% src="src/assets/ui/images/tablet_projects.png"></div>
+
+For mobile:
+
+<div align="left"><img width=80% src="src/assets/ui/images/mobile_header.png"></div>
+<div align="left"><img width=80% src="src/assets/ui/images/mobile_projects.png"></div>
+
 ---
 
 ## Enjoy the ride!
