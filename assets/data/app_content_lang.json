@@ -47,8 +47,9 @@
         "now": "Actualidad",
         "technologies": "Las tecnologías que uso...",
         "role": "Rol",
-        "technologie": "Teconologías",
+        "technologie": "Tecnologías",
         "year": "Año",
+        "prev": "Anterior",
         "next": "Siguiente"
     }
 }
