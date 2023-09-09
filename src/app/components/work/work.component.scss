@@ -7,12 +7,14 @@
         margin: 50px 100px 150px;
         border: solid 2px $color_4;
         padding: 80px;
-        display: grid;
         justify-items: center;
         align-items: center;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(5, 1fr);
         position: relative;
+        &.shown {
+            display: grid;
+        }
         .title, .description, .other-info, .project-count {
             grid-column: 1/3;
         }
@@ -87,10 +89,12 @@
 @media screen and (max-width: 1024px) {
     #work {
         .each-project {
-            display: flex;
             flex-direction: column;
             justify-content: space-between;
             margin: 50px;
+            &.shown {
+                display: flex;
+            }
             .title {
                 font-size: 25px;
             }

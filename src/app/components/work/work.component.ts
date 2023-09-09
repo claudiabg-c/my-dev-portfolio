@@ -32,9 +32,7 @@ export class WorkComponent implements OnInit {
     this.GetIndex();
     this.GetData(this.projectId);
     this.GetDataLang(this.lang);
-    this.prevProject();
-    this.nextProject();
-  }
+  }  
 
   GetIndex() {
     this._dataAPI.getIndex().subscribe(res => {
@@ -50,17 +48,16 @@ export class WorkComponent implements OnInit {
   GetData(projectId: number){
     if (this.debug) {console.log('*** LOADING DATA...');}
     this._dataAPI.getContent().subscribe(res => {
-      this.projects = res[this.lang].projects;
+      this.projects = res[this.lang].projects;this.shownProject = 1;
       for (let i = 0; i < this.projectsIndex.length; i++) {
-        this.projectId = i+1;
+        this.projectId = i + 1;
         if (this.projectId === this.shownProject) {
-          if (this.projects[this.projectId]) {
-            this.projects[this.projectId].class = 'd-block';
-          }
+          this.projects[this.projectId - 1].class = 'shown';
         } else {
-          this.projects[i].class = 'd-none';
+          this.projects[this.projectId - 1].class = 'd-none';
         };
-        this.projects[i]['id'] = this.projectId;
+        this.projects[this.projectId - 1]['id'] = this.projectId;
+
         if (this.debug) {
           console.log("****** EACH PROJECT DATA: ", this.projects[i]);
         };
@@ -75,12 +72,26 @@ export class WorkComponent implements OnInit {
   };
 
   nextProject() {
-    this.GetData(this.projectId);
-    this.shownProject++;
+    if (this.shownProject < this.projects.length) {
+      this.shownProject++;
+      this.updateProjectVisibility();
+    }
   }
   
   prevProject() {
-    this.GetData(this.projectId);
-    this.shownProject--;
+    if (this.shownProject > 1) {
+      this.shownProject--;
+      this.updateProjectVisibility();
+    }
+  }
+  
+  private updateProjectVisibility() {
+    for (let i = 0; i < this.projects.length; i++) {
+      if (i === this.shownProject - 1) {
+        this.projects[i].class = 'shown';
+      } else {
+        this.projects[i].class = 'd-none';
+      }
+    }
   }
 }

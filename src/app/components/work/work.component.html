@@ -1,7 +1,7 @@
 <section class="work" id="work">
     <article class="project-container" *ngFor="let project of projects; let i = index;" id="{{project.id}}">
         <div class="each-project {{project.class}}">
-            <div class="project-count"><span class="actual-project">{{project.id}}</span> / <span class="all-projects">{{projects.length}}</span></div>
+            <div class="project-count"><span class="actual-project">{{i + 1}}</span> / <span class="all-projects">{{projects.length}}</span></div>
             <h1 class="title">{{project.title}}</h1>
             <p class="description">{{project.description}}</p>
             <img class="project-image" src="{{project.image}}">
