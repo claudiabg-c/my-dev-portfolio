@@ -8,17 +8,17 @@ I chose this specific framework because I was using it in my work place and I wa
 
 I also used Sass and Html for the styling.
 
-The page is using two languages, spanish and english, and depending on your navigator language the page loads in one language or the other. This was a big challenge to me because I really wanted to approach as many people as I could.
+The page is using two languages, spanish and english, and depending on your navigator language the page loads in one language or the other. This was a big challenge to me because I really wanted to approach as many people as I could and I wanted to do so in a simple intuitive way.
 
 ## How to view the project
 
-Simply click on the link provided on the "about" section on the top right of the screen and you can see the web in any device of your choice
+Just click on the link provided on the "about" section on the top right of the screen and you can see the web in any device of your choice
 
 ## Responsive design
 
 As I just said, you can view the project in any device that you prefer. This is thanks to its responsive design that allows you to see everything correctly anywhere, any time.
 
-Just in case you feel the urge to enjoy my web page and you don't have a PC around.
+Just in case you feel the urge to enjoy my web page and you don't have other devices around.
 
 This is the aprox view you will get depending on the device:
 
@@ -45,7 +45,7 @@ For mobile:
 
 ---
 
-## Enjoy the ride!
+## Enjoy!
 
 <div align="center">
 <img src="https://media.tenor.com/5LT51B0DSIoAAAAC/funny-animals-dog.gif" alt="harry potter gif" width="300">
