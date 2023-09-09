@@ -10,7 +10,8 @@
                 <li class="technologies">{{dataLang.technologie}}<span>{{project.technologies}}</span></li>
                 <li class="year">{{dataLang.year}}<span>{{project.year}}</span></li>
             </ul>
-            <button class="next" (click)="nextProject()">{{dataLang.next}}</button>
+            <button class="prev" (click)="prevProject()" *ngIf="i > 0">{{dataLang.prev}}</button>
+            <button class="next" (click)="nextProject()" *ngIf="i < projects.length - 1">{{dataLang.next}}</button>
         </div>
     </article>
 </section>

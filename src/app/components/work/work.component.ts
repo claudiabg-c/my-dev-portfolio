@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
+
 export class WorkComponent implements OnInit {
 
   private debug: boolean = false;
@@ -31,6 +32,7 @@ export class WorkComponent implements OnInit {
     this.GetIndex();
     this.GetData(this.projectId);
     this.GetDataLang(this.lang);
+    this.prevProject();
     this.nextProject();
   }
 
@@ -74,10 +76,11 @@ export class WorkComponent implements OnInit {
 
   nextProject() {
     this.GetData(this.projectId);
-    if (this.shownProject < this.projectsIndex.length) {
-      this.shownProject++;
-    } else if (this.shownProject === this.projectsIndex.length) {
-      this.shownProject = 1;
-    }
+    this.shownProject++;
+  }
+  
+  prevProject() {
+    this.GetData(this.projectId);
+    this.shownProject--;
   }
 }

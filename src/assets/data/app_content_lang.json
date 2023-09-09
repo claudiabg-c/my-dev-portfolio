@@ -49,6 +49,7 @@
         "role": "Rol",
         "technologie": "Tecnologías",
         "year": "Año",
+        "prev": "Anterior",
         "next": "Siguiente"
     }
 }
