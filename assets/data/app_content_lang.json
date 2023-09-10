@@ -23,6 +23,7 @@
         "role": "Role",
         "technologie": "Technologies",
         "year": "Year",
+        "prev": "Previous",
         "next": "Next"
     },
     "es": {
