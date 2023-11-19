@@ -102,7 +102,7 @@
         margin: 30px;
         ul {
             display: grid;
-            grid-template-columns: repeat(4, 1fr) repeat(3, 2fr);
+            grid-template-columns: repeat(5, 1fr) repeat(3, 2fr);
             position: relative;
             &.timeline-professions {
                 height: 150px;
@@ -126,9 +126,12 @@
                         grid-column: 5/6;
                         bottom: 20px;
                         border-color: $color_5;
+                        h3, h4  {
+                            font-size: 9px;
+                        }
                     }
                     &.developer {
-                        grid-column: 6/8;
+                        grid-column: 6/9;
                         top: 0;
                         border-color: $color_2;
                     }
@@ -150,11 +153,17 @@
                         width: 50%;
                         bottom: 40px;
                         border-color: $color_6;
+                        h5 {
+                            font-size: 9px;
+                        }
+                        h6 {
+                            font-size: 11px;
+                        }
                     }
                     &.job {
-                        grid-column: 7/8;
-                        width: 150%;
-                        left: -50%;
+                        grid-column: 7/9;
+                        width: 120%;
+                        left: -20%;
                         bottom: 60px;
                         border-color: $color_7;
                     }
@@ -256,10 +265,13 @@
                             grid-column: 1/3;
                         }
                         &.teacher {
-                            grid-column: 3/5;
+                            grid-column: 3/4;
+                            h3, h4 {
+                                font-size: 6px;
+                            }
                         }
                         &.developer {
-                            grid-column: 5/8;
+                            grid-column: 4/9;
                         }
                         h3 {
                             font-size: 10px;
@@ -272,11 +284,11 @@
                 &.timeline-experience {
                     li {
                         &.bootcamp {
-                            grid-column: 5/6;
-                            width: 100%;
+                            grid-column: 4/6;
+                            width: 80%;
                         }
                         &.job {
-                            grid-column: 6/8;
+                            grid-column: 6/9;
                             left: 0;
                             width: 100%;
                         }
@@ -289,7 +301,7 @@
                     }
                 }
                 &.timeline-years {
-                    grid-template-columns: repeat(2, 1fr) repeat(3, 2fr);
+                    grid-template-columns: repeat(3, 1fr) repeat(3, 2fr);
                     li {
                         font-size: 10px;
                         &.year-2018, &.year-2019 {
