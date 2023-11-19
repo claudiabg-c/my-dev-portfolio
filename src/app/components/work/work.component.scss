@@ -82,14 +82,14 @@
 @media screen and (max-width: 1024px) {
     #work {
         .each-project {
-            flex-direction: column;
             justify-content: space-between;
-            margin: 50px;
             &.shown {
                 display: flex;
             }
-            .title {
-                font-size: 25px;
+            .project-information {
+                .title {
+                    font-size: 25px;
+                }
             }
             .project-image {
                 max-width: 100%;
@@ -120,15 +120,21 @@
 @media screen and (max-width: 768px) {
     #work {
         .each-project {
+            flex-direction: column;
             margin: 0 50px 50px;
             padding: 50px;
-            .title {
-                padding-bottom: 10px;
-            }
-            .description {
-                font-size: 14px;
+            .project-information {
+                width: 90%;
+                .title {
+                    padding-bottom: 10px;
+                }
+                .description {
+                    font-size: 14px;
+                }
             }
             .project-image {
+                width: 100%;
+                height: auto;
                 right: 0;
                 position: relative;
                 padding: 0;
@@ -158,18 +164,20 @@
             margin: 0 20px;
             padding: 20px;
             height: calc(100vh - 130px);
-            .description {
-                font-size: 12px;
-                line-height: 1.2rem;
-                grid-row: 2/4;
-            }
-            .project-image {
-                grid-row: 4/7;
+            justify-content: center;
+            .project-information {
+                .description {
+                    font-size: 12px;
+                    line-height: 1.2rem;
+                    grid-row: 2/4;
+                }
             }
             .other-info {
                 grid-column-gap: 20px;
                 line-height: 1.2;
                 justify-content: space-between;
+                flex-direction: column;
+                padding: 10px 0;
                 .role, .technologies, .year {
                     font-size: 10px;
                 }
