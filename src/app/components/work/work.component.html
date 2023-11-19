@@ -2,14 +2,16 @@
     <article class="project-container" *ngFor="let project of projects; let i = index;" id="{{project.id}}">
         <div class="each-project {{project.class}}">
             <div class="project-count"><span class="actual-project">{{i + 1}}</span> / <span class="all-projects">{{projects.length}}</span></div>
-            <h1 class="title">{{project.title}}</h1>
-            <p class="description">{{project.description}}</p>
+            <div class="project-information">
+                <h1 class="title">{{project.title}}</h1>
+                <p class="description">{{project.description}}</p>
+                <ul class="other-info">
+                    <li class="role">{{dataLang.role}}<span>{{project.role}}</span></li>
+                    <li class="technologies">{{dataLang.technologie}}<span>{{project.technologies}}</span></li>
+                    <li class="year">{{dataLang.year}}<span>{{project.year}}</span></li>
+                </ul>
+            </div>
             <img class="project-image" src="{{project.image}}">
-            <ul class="other-info">
-                <li class="role">{{dataLang.role}}<span>{{project.role}}</span></li>
-                <li class="technologies">{{dataLang.technologie}}<span>{{project.technologies}}</span></li>
-                <li class="year">{{dataLang.year}}<span>{{project.year}}</span></li>
-            </ul>
             <button class="prev" (click)="prevProject()" *ngIf="i > 0">{{dataLang.prev}}</button>
             <button class="next" (click)="nextProject()" *ngIf="i < projects.length - 1">{{dataLang.next}}</button>
         </div>
