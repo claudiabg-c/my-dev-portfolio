@@ -7,11 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
-
 export class WorkComponent implements OnInit {
 
   private debug: boolean = false;
-
   public lang: string = '';
   public dataLang: any = [];
   public projectId: number = 0;
@@ -30,9 +28,8 @@ export class WorkComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetIndex();
-    this.GetData(this.projectId);
     this.GetDataLang(this.lang);
-  }  
+  }
 
   GetIndex() {
     this._dataAPI.getIndex().subscribe(res => {
@@ -42,26 +39,27 @@ export class WorkComponent implements OnInit {
         console.log("*** TOTAL PROJECTS: ", numberOfProjects);
         console.log("*** PROJECTS INDEX:", this.projectsIndex);
       }
+      this.GetData(0); // Comienza la carga de proyectos desde el primer índice
     });
   }
-  
+
   GetData(projectId: number){
     if (this.debug) {console.log('*** LOADING DATA...');}
     this._dataAPI.getContent().subscribe(res => {
-      this.projects = res[this.lang].projects;this.shownProject = 1;
+      const loadedProjects = res[this.lang].projects;
       for (let i = 0; i < this.projectsIndex.length; i++) {
-        this.projectId = i + 1;
-        if (this.projectId === this.shownProject) {
-          this.projects[this.projectId - 1].class = 'shown';
+        const project = loadedProjects[i];
+        project.id = i + 1;
+        if (project.id === this.shownProject) {
+          project.class = 'shown';
         } else {
-          this.projects[this.projectId - 1].class = 'd-none';
-        };
-        this.projects[this.projectId - 1]['id'] = this.projectId;
-
+          project.class = 'd-none';
+        }
+        this.projects.push(project); // Agregar el proyecto al arreglo existente
         if (this.debug) {
-          console.log("****** EACH PROJECT DATA: ", this.projects[i]);
-        };
-      };
+          console.log("****** EACH PROJECT DATA: ", project);
+        }
+      }
     });
   };
 
@@ -72,7 +70,7 @@ export class WorkComponent implements OnInit {
   };
 
   nextProject() {
-    if (this.shownProject < this.projects.length) {
+    if (this.shownProject < this.projectsIndex.length) {
       this.shownProject++;
       this.updateProjectVisibility();
     }

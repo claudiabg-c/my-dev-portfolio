@@ -1,6 +1,6 @@
 <section class="work" id="work">
-    <article class="project-container" *ngFor="let project of projects; let i = index;" id="{{project.id}}">
-        <div class="each-project {{project.class}}">
+    <article class="project-container" *ngFor="let project of projects; let i = index;" [id]="'project-' + project.id">
+        <div class="each-project" [ngClass]="{'shown': i + 1 === shownProject, 'd-none': i + 1 !== shownProject}">
             <div class="project-count"><span class="actual-project">{{i + 1}}</span> / <span class="all-projects">{{projects.length}}</span></div>
             <div class="project-information">
                 <h1 class="title">{{project.title}}</h1>
@@ -11,9 +11,9 @@
                     <li class="year">{{dataLang.year}}<span>{{project.year}}</span></li>
                 </ul>
             </div>
-            <img class="project-image" src="{{project.image}}">
-            <button class="prev" (click)="prevProject()" *ngIf="i > 0">{{dataLang.prev}}</button>
-            <button class="next" (click)="nextProject()" *ngIf="i < projects.length - 1">{{dataLang.next}}</button>
+            <img class="project-image" [src]="project.image">
+            <button class="prev" (click)="prevProject()" *ngIf="shownProject > 1">{{dataLang.prev}}</button>
+            <button class="next" (click)="nextProject()" *ngIf="shownProject < projects.length">{{dataLang.next}}</button>
         </div>
     </article>
 </section>
