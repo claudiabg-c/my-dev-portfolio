@@ -1,0 +1,53 @@
+@import '../../../assets/ui/css/variables.scss';
+
+.contact-me {
+    padding: 90px;
+    form {
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 5px;
+                font-size: 16px;
+                border: solid 2px $color_4;
+                background-color: $color_8;
+                color: $color_1;
+                &:-internal-autofill-selected {
+                    background-color: $color_8 !important;
+                }
+            }
+            textarea {
+                height: 150px;
+            }
+            .error-msg {
+                padding-top: 5px;
+            }
+        }
+        button {
+            color: $color_1;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 5px;
+            padding: 10px 20px;
+            margin-right: 40px;
+            cursor: pointer;
+            &:hover {
+                background-color: $color_2;
+            }
+        }
+    }
+}
+.thanks {
+    font-size: 26px;
+    text-align: center;
+    padding-top: 10%;
+}
