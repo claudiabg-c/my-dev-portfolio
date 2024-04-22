@@ -39,7 +39,7 @@ export class WorkComponent implements OnInit {
         console.log("*** TOTAL PROJECTS: ", numberOfProjects);
         console.log("*** PROJECTS INDEX:", this.projectsIndex);
       }
-      this.GetData(0); // Comienza la carga de proyectos desde el primer índice
+      this.GetData(0);
     });
   }
 
@@ -55,7 +55,7 @@ export class WorkComponent implements OnInit {
         } else {
           project.class = 'd-none';
         }
-        this.projects.push(project); // Agregar el proyecto al arreglo existente
+        this.projects.push(project);
         if (this.debug) {
           console.log("****** EACH PROJECT DATA: ", project);
         }
