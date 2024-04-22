@@ -1,14 +1,14 @@
 @import '../../../assets/ui/css/variables.scss';
 
-.contact-me {
+.footer {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-    background-image: linear-gradient($color_3, $color_8);
     padding: 90px 90px 0;
+    position: relative;
     .email-container {
-        align-self: baseline;
+        align-self: end;
         width: 75px;
         height: 75px;
         border-radius: 50%;
@@ -17,6 +17,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        z-index: 1;
         .first-layer {
             border-radius: 50%;
             height: 50px;
@@ -35,20 +36,26 @@
                     text-align: center;
                     align-self: center;
                     background-color: transparent;
-                    top: 38%;
-                    left: 120%
+                    top: 35%;
+                    left: -290%
                 }
             }
         }
     }
     .copy {
+        z-index: 1;
         font-size: 12px;
         background-color: transparent;
+    }
+    .bottom-svg {
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .contact-me {
+    .footer {
         padding: 90px 0 0;
         .email-container {
             width: 50px;
