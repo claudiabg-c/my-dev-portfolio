@@ -1,0 +1,33 @@
+<section class="contact-me" id="contact">
+    <h1>Contacto</h1>
+    <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required [(ngModel)]="formData.name">
+            <div class="error-msg" *ngIf="contactForm.controls['name']?.errors?.['required'] && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
+                El nombre es necesario. A nadie le gusta recibir anónimos ;)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
+            <div class="error-msg" *ngIf="contactForm.controls['email']?.errors?.['required'] && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">
+                El correo electrónico es necesario para que pueda responderte.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required [(ngModel)]="formData.message"></textarea>
+            <div class="error-msg" *ngIf="contactForm.controls['message']?.errors?.['required'] && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
+                Por favor, escribe un mensaje. Y si es bonito, mejor 🤍
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+    </form>
+    <div *ngIf="formSubmitted" class="thanks">
+        ¡Gracias por tu mensaje!
+    </div>
+</section>
