@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit {
 
   formSubmitted = false;
   contactForm: NgForm | undefined;
+  formVisible = true;
 
   constructor() { }
 
@@ -28,8 +29,7 @@ export class ContactComponent implements OnInit {
 
   submitForm(contactForm: NgForm) {
     this.contactForm = contactForm;
-    // Aquí puedes agregar lógica para enviar los datos del formulario, por ejemplo, a través de un servicio HTTP
-    // Una vez que el envío se complete con éxito, establece formSubmitted en true
     this.formSubmitted = true;
+    this.formVisible = false;
   }
 }

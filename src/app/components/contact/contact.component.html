@@ -1,6 +1,6 @@
 <section class="contact-me" id="contact">
     <h1>Contacto</h1>
-    <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
+    <form *ngIf="formVisible" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
         <div class="form-group">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required [(ngModel)]="formData.name">
