@@ -14,22 +14,34 @@ export class ContactComponent implements OnInit {
   };
 
   formSubmitted = false;
-  contactForm: NgForm | undefined;
   formVisible = true;
 
   constructor() { }
 
-  ngOnInit(): void {
-    if (!this.contactForm) {
-      setTimeout(() => {
-        this.contactForm = {} as NgForm;
-      });
-    }
-  }
+  ngOnInit(): void { }
 
   submitForm(contactForm: NgForm) {
-    this.contactForm = contactForm;
-    this.formSubmitted = true;
-    this.formVisible = false;
+    if (contactForm.valid) {
+      fetch('https://formspree.io/f/mayrapjn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.formData)
+      })
+        .then(response => {
+          if (response.ok) {
+            this.formSubmitted = true;
+            this.formVisible = false;
+          } else {
+            console.error('Error en el envío del formulario');
+          }
+        })
+        .catch(error => {
+          console.error('Error en el envío del formulario', error);
+        });
+    } else {
+      console.error('El formulario no es válido');
+    }
   }
 }
