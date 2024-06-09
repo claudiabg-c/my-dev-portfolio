@@ -115,14 +115,14 @@
     }
 }
 
-//add media query for mobile
-
 @media screen and (max-width: 768px) {
     #work {
+        padding-top: 50px;
         .each-project {
             flex-direction: column;
-            margin: 0 50px 50px;
-            padding: 50px;
+            height: auto;
+            margin: 0 10px 50px;
+            padding: 20px 10px;
             .project-information {
                 width: 90%;
                 .title {
@@ -131,6 +131,13 @@
                 .description {
                     font-size: 14px;
                 }
+                .other-info {
+                    padding-bottom: 30px;
+                    grid-column-gap: 30px;
+                    .role, .technologies, .year {
+                        font-size: 12px;
+                    }
+                }
             }
             .project-image {
                 width: 100%;
@@ -138,12 +145,6 @@
                 right: 0;
                 position: relative;
                 padding: 0;
-            }
-            .other-info {
-                padding-bottom: 30px;
-                .role, .technologies, .year {
-                    font-size: 12px;
-                }
             }
             .prev, .next {
                 font-size: 14px;

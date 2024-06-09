@@ -51,3 +51,12 @@
     text-align: center;
     padding-top: 10%;
 }
+
+@media screen and (max-width: 768px) {
+    .contact-me {
+        padding: 50px 10px 30px;
+        form {
+            margin: 10px;
+        }
+    }
+}

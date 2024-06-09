@@ -206,6 +206,7 @@
 @media screen and (max-width: 768px) {
     .about {
         grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
         .technologies {
             padding: 60px 0 0;
             .technologies-image {
@@ -228,7 +229,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     .about {
         grid-template-columns: 1fr;
         padding: 30px 20px;
