@@ -9,13 +9,13 @@
             [
                 {
                     "id": 1,
-                    "title": "Harry Potter characters' search page",
-                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
-                    "image": "./assets/ui/images/harry_potter.png",
+                    "title": "Virtual gallery for plastic artist",
+                    "description": "An interactive and responsive website designed to showcase the artwork of Gloria Gómez-Calcerrada. The gallery allows users to explore different collections of paintings, from oil to engravings and acrylic. Additionally, users can read about the artist's life, the events and exhibitions she has participated in, and her artistic career.",
+                    "image": "./assets/ui/images/artist_website.png",
                     "role": "Designer and developer",
-                    "technologies": "HTML, Sass and React",
-                    "year": "2022"
-                },
+                    "technologies": "HTML, Sass, and React",
+                    "year": "2024"
+                },                
                 {
                     "id": 2,
                     "title": "Create interactive business cards web app",
@@ -69,6 +69,15 @@
                     "role": "Designer and developer",
                     "technologies": "HTML, Sass and Javascript",
                     "year": "2021"
+                },
+                {
+                    "id": 1,
+                    "title": "Harry Potter characters' search page",
+                    "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                    "image": "./assets/ui/images/harry_potter.png",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass and React",
+                    "year": "2022"
                 }
             ]
     },
@@ -82,12 +91,12 @@
             [
                 {
                     "id": 1,
-                    "title": "Buscador de personajes de Harry Potter",
-                    "description": "Se trata de una web responsive en la que puedes buscar personajes de Harry Potter y obtener algo de información básica sobre ellos. Los datos están sacados de una API pública y el diseño es interactivo y cambia conforme a los colores de las casas de Hogwarts.",
-                    "image": "./assets/ui/images/harry_potter.png",
+                    "title": "Galería virtual para artista plástico",
+                    "description": "Una página web interactiva y responsive diseñada para mostrar las obras de arte de Gloria Gómez-Calcerrada. La galería permite a los usuarios explorar diferentes colecciones de pinturas, desde el óleo hasta los grabados y el acrílico. Además, se puede leer sobre la vida de la artista, los eventos y exposiciones en los que ha participado, y su trayectoria artística.",
+                    "image": "./assets/ui/images/artist_website.png",
                     "role": "Diseñadora y desarrolladora",
                     "technologies": "HTML, Sass y React",
-                    "year": "2022"
+                    "year": "2024"
                 },
                 {
                     "id": 2,
@@ -142,6 +151,15 @@
                     "role": "Diseñadora y desarrolladora",
                     "technologies": "HTML, Sass y Javascript",
                     "year": "2021"
+                },
+                {
+                    "id": 8,
+                    "title": "Buscador de personajes de Harry Potter",
+                    "description": "Se trata de una web responsive en la que puedes buscar personajes de Harry Potter y obtener algo de información básica sobre ellos. Los datos están sacados de una API pública y el diseño es interactivo y cambia conforme a los colores de las casas de Hogwarts.",
+                    "image": "./assets/ui/images/harry_potter.png",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y React",
+                    "year": "2022"
                 }
             ]
     }
