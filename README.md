@@ -1,42 +1,37 @@
-# My developer portfolio
+# 🎨 Welcome to My Developer Portfolio! 🚀
 
-This a web page for you, to get an idea of my past experience and the projects I've been working on in the past.
+Hey there! You've stumbled upon my developer portfolio, a little corner of the web where you can get a sneak peek into my past experiences and the projects I've been tinkering with lately.
 
-This portfolios has been generated with Angular v 13.3.4. 
+This site was crafted with Angular v13.3.4 – because, well, I was neck-deep in it at work, and what better way to learn than by doing? Plus, I wanted to impress my co-workers (and now, you!).
 
-I chose this specific framework because I was using it in my work place and I wanted to practice it since that was the only way I had to learn more and more about it and apply everything I learned from it on my work projects. 
+Of course, I couldn't resist the temptation to sprinkle some Sass and HTML magic for styling. Because plain CSS? That’s just too... vanilla.
 
-I also used Sass and Html for the styling.
+## 🌍 Multilingual Magic
+You might notice that this page speaks both Spanish and English. Yep, it's bilingual! Depending on your browser's language settings, the site will greet you in the language you’re most comfortable with. Why? Because I’m all about reaching out to as many people as possible, and let’s be honest, impressing them too. 🌐
 
-The page is using two languages, spanish and english, and depending on your navigator language the page loads in one language or the other. This was a big challenge to me because I really wanted to approach as many people as I could and I wanted to do so in a simple intuitive way.
+## 👀 How to Explore My Work
+Simply click the link in the "about" section (top right corner – can’t miss it) to dive into the portfolio. And don’t worry, it looks fabulous on any device – be it your trusty PC, tablet, or the phone you probably should’ve upgraded last year.
 
-## How to view the project
+## 📱 Responsive Design – Because Size Matters
+Speaking of devices, this site is designed to be responsive. So whether you're on a widescreen monitor or squinting at your phone during a boring meeting, everything will look just right.
 
-Just click on the link provided on the "about" section on the top right of the screen and you can see the web in any device of your choice
+For the curious cats out there, here’s a preview of how the site looks on different devices:
 
-## Responsive design
-
-As I just said, you can view the project in any device that you prefer. This is thanks to its responsive design that allows you to see everything correctly anywhere, any time.
-
-Just in case you feel the urge to enjoy my web page and you don't have other devices around.
-
-This is the aprox view you will get depending on the device:
-
-For PC:
+### PC:
 
 <p float="left">
   <img width=40% src="src/assets/ui/images/pc_header_about.png">
   <img width=40% src="src/assets/ui/images/pc_projects.png">
 </p>
 
-For tablet:
+### Tablet:
 
 <p float="left">
   <img width=40% src="src/assets/ui/images/tablet_header.png">
   <img width=40% src="src/assets/ui/images/tablet_projects.png">
 </p>
 
-For mobile:
+### Mobile:
 
 <p float="left">
   <img width=40% src="src/assets/ui/images/mobile_header.png">
@@ -45,8 +40,12 @@ For mobile:
 
 ---
 
-## Enjoy!
+## 🎉 Enjoy the Ride!
+
+I hope you enjoy browsing through my work as much as I enjoyed creating it. If not, well... I hope this gif can cheer you up:
 
 <div align="center">
 <img src="https://media.tenor.com/5LT51B0DSIoAAAAC/funny-animals-dog.gif" alt="harry potter gif" width="300">
 </div>
+
+Happy browsing! 🖖
