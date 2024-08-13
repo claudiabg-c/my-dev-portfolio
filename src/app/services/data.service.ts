@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-
 export class DataService {
 
   constructor( 
@@ -22,9 +21,5 @@ export class DataService {
 
   getContent(): Observable<any>{
     return this._http.get('./assets/data/app_content.json');
-  }
-
-  getIndex(): Observable<any>{
-    return this._http.get('./assets/data/app_index.json');
   }
 }

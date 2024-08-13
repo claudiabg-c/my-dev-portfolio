@@ -91,7 +91,7 @@
             [
                 {
                     "id": 1,
-                    "title": "Galería virtual para artista plástico",
+                    "title": "Galería virtual para artista plástica",
                     "description": "Una página web interactiva y responsive diseñada para mostrar las obras de arte de Gloria Gómez-Calcerrada. La galería permite a los usuarios explorar diferentes colecciones de pinturas, desde el óleo hasta los grabados y el acrílico. Además, se puede leer sobre la vida de la artista, los eventos y exposiciones en los que ha participado, y su trayectoria artística.",
                     "image": "./assets/ui/images/artist_website.png",
                     "role": "Diseñadora y desarrolladora",
