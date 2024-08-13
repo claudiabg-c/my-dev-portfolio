@@ -2,6 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { ActivatedRoute } from '@angular/router';
 
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  role: string;
+  technologies: string;
+  year: string;
+  class?: string;
+}
+
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
@@ -12,7 +23,7 @@ export class WorkComponent implements OnInit {
   private debug: boolean = false;
   public lang: string = '';
   public dataLang: any = [];
-  public projects: any = [];
+  public projects: Project[] = [];
   public shownProject: number = 1;
 
   constructor(
@@ -31,20 +42,17 @@ export class WorkComponent implements OnInit {
 
   GetData() {
     this._dataAPI.getContent().subscribe(res => {
-      const loadedProjects = res[this.lang].projects;
-      for (let i = 0; i < loadedProjects.length; i++) {
-        const project = loadedProjects[i];
-        project.id = i + 1;  // Agregar ID a cada proyecto
-        project.class = project.id === this.shownProject ? 'shown' : 'd-none';
-        this.projects.push(project);
+      const loadedProjects = res[this.lang].projects as Project[];
 
-        if (this.debug) {
-          console.log("****** EACH PROJECT DATA: ", project);
-        }
-      }
+      this.projects = loadedProjects.map((project: Project, index: number) => ({
+        ...project,
+        id: index + 1,
+        class: (index + 1 === this.shownProject) ? 'shown' : 'd-none'
+      }));
 
       if (this.debug) {
         console.log("*** TOTAL PROJECTS: ", this.projects.length);
+        this.projects.forEach((project: Project) => console.log("****** EACH PROJECT DATA: ", project));
       }
     });
   }
@@ -70,8 +78,13 @@ export class WorkComponent implements OnInit {
   }
   
   private updateProjectVisibility() {
-    for (let i = 0; i < this.projects.length; i++) {
-      this.projects[i].class = i === this.shownProject - 1 ? 'shown' : 'd-none';
-    }
+    this.projects = this.projects.map((project: Project, index: number) => ({
+      ...project,
+      class: (index + 1 === this.shownProject) ? 'shown' : 'd-none'
+    }));
+    setTimeout(() => {
+      const elements = document.querySelectorAll('.each-project');
+      elements.forEach(el => el.classList.add('transition-fix'));
+    }, 0);
   }
 }
