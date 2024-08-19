@@ -29,6 +29,7 @@
                 border-bottom: 5px solid $color_4;
             }
             .other-info {
+                margin-top: 30px;
                 display: flex;
                 grid-column-gap: 80px;
                 .role, .technologies, .year {
