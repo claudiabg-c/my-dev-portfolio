@@ -3,6 +3,8 @@
 .header {
     position: relative;
     height: calc(100vh - 70px);
+    max-width: 1900px;
+    margin: auto;
     .header-info {
         padding: 90px;
         max-width: 40vw;
