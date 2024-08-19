@@ -121,7 +121,20 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+    .container-navbar {
+        .navbar-sections {
+            .info, .resume {
+                font-size: 10px;
+                li {
+                    padding: 4px 50px 5px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
     .container-navbar {
         .navbar-sections {
             .info {

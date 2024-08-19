@@ -102,10 +102,11 @@
         margin: 30px;
         ul {
             display: grid;
-            grid-template-columns: repeat(5, 1fr) repeat(3, 2fr);
+            grid-template-columns: repeat(3, 1fr) repeat(4, 2fr);
             position: relative;
             &.timeline-professions {
                 height: 150px;
+                margin-top: 20px;
                 li {
                     position: absolute;
                     width: 100%;
@@ -118,20 +119,20 @@
                         font-size: 15px;
                     }
                     &.lawyer {
-                        grid-column: 1/5;
+                        grid-column: 1/3;
                         bottom: 0;
                         border-color: $color_4;
                     }
                     &.teacher {
-                        grid-column: 5/6;
+                        grid-column: 3/4;
                         bottom: 20px;
                         border-color: $color_5;
-                        h3, h4  {
+                        h3, h4 {
                             font-size: 9px;
                         }
                     }
                     &.developer {
-                        grid-column: 6/9;
+                        grid-column: 4/8;
                         top: 0;
                         border-color: $color_2;
                     }
@@ -149,7 +150,7 @@
                         font-size: 12px;
                     }
                     &.bootcamp {
-                        grid-column: 6/7;
+                        grid-column: 4/5;
                         width: 50%;
                         bottom: 40px;
                         border-color: $color_6;
@@ -161,9 +162,9 @@
                         }
                     }
                     &.job {
-                        grid-column: 7/9;
-                        width: 120%;
-                        left: -20%;
+                        grid-column: 5/8;
+                        width: 115%;
+                        left: -15%;
                         bottom: 60px;
                         border-color: $color_7;
                     }
@@ -173,6 +174,11 @@
                 border-top: 1px solid $color_1;
                 text-align: center;
                 margin-top: 5px;
+                li {
+                    &.year-2018, &.year-2019 {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -180,7 +186,7 @@
 
 @media screen and (max-width: 1024px) {
     .about {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         .technologies {
             grid-column: 1/4;
@@ -208,7 +214,7 @@
         grid-template-columns: repeat(2, 1fr);
         padding: 10px;
         .technologies {
-            padding: 60px 0 0;
+            padding: 60px 60px 0;
             .technologies-image {
                 width: 50%;
             }
@@ -224,7 +230,7 @@
             grid-column: 1/3;
             width: 100%;
             margin: 30px;
-            padding: 60px 0 0;
+            padding: 60px 60px 0;
         }
     }
 }
@@ -234,7 +240,7 @@
         grid-template-columns: 1fr;
         padding: 30px 20px;
         .technologies {
-            padding: 60px 0 0;
+            padding: 60px 10px 0;
             .technologies-image {
                 width: 50%;
             }

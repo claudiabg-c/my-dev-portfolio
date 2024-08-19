@@ -117,7 +117,7 @@
 
 @media screen and (max-width: 768px) {
     #work {
-        padding-top: 50px;
+        padding: 50px 60px;
         .each-project {
             flex-direction: column;
             height: auto;
@@ -125,6 +125,7 @@
             padding: 20px 10px;
             .project-information {
                 width: 90%;
+                padding-top: 20px;
                 .title {
                     padding-bottom: 10px;
                 }
@@ -132,7 +133,7 @@
                     font-size: 14px;
                 }
                 .other-info {
-                    padding-bottom: 30px;
+                    padding: 30px 0;
                     grid-column-gap: 30px;
                     .role, .technologies, .year {
                         font-size: 12px;
@@ -144,7 +145,7 @@
                 height: auto;
                 right: 0;
                 position: relative;
-                padding: 0;
+                padding: 50px;
             }
             .prev, .next {
                 font-size: 14px;
@@ -161,9 +162,9 @@
 
 @media screen and (max-width: 425px) {
     #work {
+        padding: 40px 10px;
         .each-project {
             margin: 0 20px;
-            padding: 20px;
             height: calc(100vh - 130px);
             justify-content: center;
             .project-information {
@@ -175,13 +176,17 @@
             }
             .other-info {
                 grid-column-gap: 20px;
-                line-height: 1.2;
+                line-height: 1.5;
                 justify-content: space-between;
                 flex-direction: column;
                 padding: 10px 0;
                 .role, .technologies, .year {
                     font-size: 10px;
+                    padding-bottom: 10px;
                 }
+            }
+            .project-image {
+                padding: 0 20px 20px;
             }
             .prev, .next {
                 font-size: 12px;
