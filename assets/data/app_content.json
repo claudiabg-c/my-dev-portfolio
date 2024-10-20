@@ -3,11 +3,11 @@
         "rrss_01": "https://www.linkedin.com/in/claudia-berrocal/?locale=en_US",
         "rrss_02": "https://github.com/claudiabg-c",
         "about_description": "Hi, I'm Claudia! I'm a hardworking, multidisciplinary web developer with great attention to detail who is always eager to learn new things. The majority of my work as a programmer has been in the front-end development area. For my projects, I particularly enjoy using technologies like Javascript, Angular, HTML, and Sass. I also have some expertise in full-stack development and have had the opportunity to work in the backend area with PHP and Node.js. I value organization and process control. I am methodical, and I find project and people management interesting. Now, on a more personal note, I love reading, movies, and video games. I also really enjoy playing board games and puzzles. Currently, I live in Spain, but nothing ties me down here, so I sometimes consider living elsewhere for a while. I'm always open to new ideas and new challenges and job opportunities!",
-        "projects": [         
+        "projects": [
             {
                 "id": 1,
                 "title": "Virtual gallery for plastic artist",
-                "description": "An interactive and responsive website designed to showcase the artwork of Gloria Gómez-Calcerrada. The gallery allows users to explore different collections of paintings, from oil to engravings and acrylic. Additionally, users can read about the artist's life, the events and exhibitions she has participated in, and her artistic career.",
+                "description": "An interactive web application designed to simplify board game sessions by helping users manage player inputs and game selection. It features player management, random player ordering, and a multilingual interface (English/Spanish). The app uses the Board Game Geek API to fetch game information and stores data on previously entered player names for easy reuse.",
                 "image": "./assets/ui/images/artist_website.png",
                 "role": "Designer and developer",
                 "technologies": "HTML, Sass, and React",
@@ -24,26 +24,26 @@
             },
             {
                 "id": 3,
-                "title": "Hangman game",
-                "description": "This was a group project of the popular Hangman game that I created while I was learning React.",
+                "title": "Hangman Game",
+                "description": "A group project recreating the classic hangman game, developed during my learning of React. Players guess letters, with a dynamic and interactive design that reacts to each incorrect guess.",
                 "image": "./assets/ui/images/hangman.png",
                 "role": "Developer",
-                "technologies": "HTML, Sass and React",
+                "technologies": "HTML, Sass, and React",
                 "year": "2022"
             },
             {
                 "id": 4,
-                "title": "Anime search engine",
-                "description": "This is a responsive web app where you can find animes and add them to a favourites list that will be saved in your browser. I got the animes from a public API.",
+                "title": "Anime Searcher",
+                "description": "A web application where users can search for anime using a public API and add them to a favorites list. This list is saved locally in the browser and remains accessible upon the user's return to the page.",
                 "image": "./assets/ui/images/anime.png",
-                "role": "Designer and developer",
-                "technologies": "HTML, Sass and Javascript",
+                "role": "Designer and Developer",
+                "technologies": "HTML, Sass, and Javascript",
                 "year": "2021"
             },
             {
                 "id": 5,
-                "title": "Layout landing page",
-                "description": "This is a responsive web landing page built with Html and Sass from a previously given design.",
+                "title": "Landing Page Layout",
+                "description": "This project is focused on the layout of a landing page based on a provided design. It was developed using HTML and Sass, with attention to detail and design accuracy.",
                 "image": "./assets/ui/images/layout.png",
                 "role": "Developer",
                 "technologies": "HTML and Sass",
@@ -51,8 +51,8 @@
             },
             {
                 "id": 6,
-                "title": "Project team presentation web page",
-                "description": "This was a group project that I did while I was learning Html and Sass. It is a responsive web page where you can see the members of a developers' team and contact them.",
+                "title": "Project Team Introduction Website",
+                "description": "A group project designed to practice building responsive websites. This site introduces the members of a project team and includes a contact form to get in touch with them.",
                 "image": "./assets/ui/images/team_page.png",
                 "role": "Developer",
                 "technologies": "HTML and Sass",
@@ -60,29 +60,29 @@
             },
             {
                 "id": 7,
-                "title": "Rock, paper, scissors game",
-                "description": "This is a responsive web app where you can play the famous rock, paper, scissors game and get a cute little gif everytime you win, loose or tie. And fun fact: the background changes with the seasons and festivities.",
+                "title": "Rock, Paper, Scissors",
+                "description": "A responsive web application of the Rock, Paper, Scissors game. After each round, a fun gif is displayed depending on whether the player won, lost, or tied. The game background also changes according to seasons or holidays.",
                 "image": "./assets/ui/images/rock_paper_scissors.png",
-                "role": "Designer and developer",
-                "technologies": "HTML, Sass and Javascript",
+                "role": "Designer and Developer",
+                "technologies": "HTML, Sass, and Javascript",
                 "year": "2021"
             },
             {
-                "id": 1,
-                "title": "Harry Potter characters' search page",
-                "description": "This is a responsive web app where you can find Harry Potter characters and a bit of information about them. I got the info from a public API and I did an interactive design based on the colors of the Hogwarts houses.",
+                "id": 8,
+                "title": "Harry Potter Character Finder",
+                "description": "A responsive web app for searching Harry Potter characters, providing basic information from a public API. The design is interactive and adapts to the colors of the character's Hogwarts house.",
                 "image": "./assets/ui/images/harry_potter.png",
-                "role": "Designer and developer",
-                "technologies": "HTML, Sass and React",
+                "role": "Designer and Developer",
+                "technologies": "HTML, Sass, and React",
                 "year": "2022"
             },
             {
                 "id": 9,
-                "title": "Create interactive business cards web app",
-                "description": "This was a group project that I did while I was learning React and NodeJs. It is a responsive web app where you can create your ouwn interactive business cards, choose the colors and post them on your social media.",
+                "title": "Business Card Creator",
+                "description": "A group project built using React and NodeJs. It is a responsive web app where users can design their own business cards, customizing colors and content, with the option to share the card on social media.",
                 "image": "./assets/ui/images/creative_cards.png",
                 "role": "Developer",
-                "technologies": "HTML, Sass, React and NodeJs",
+                "technologies": "HTML, Sass, React, and NodeJs",
                 "year": "2022"
             }
         ]
@@ -104,7 +104,7 @@
             {
                 "id": 2,
                 "title": "Board Game Buddy",
-                "description": "Una aplicación web diseñada para facilitar la organización de sesiones de juegos de mesa. Permite buscar juegos, gestionar jugadores, y establecer el orden de participación de manera sencilla. Con soporte multilingüe y un diseño responsive, se adapta a cualquier dispositivo, haciendo que tus noches de juegos sean más fluidas.",
+                "description": "Una aplicación web interactiva diseñada para facilitar las sesiones de juegos de mesa al ayudar a los usuarios a gestionar los jugadores y la selección de juegos. Ofrece gestión de jugadores, orden aleatorio de los mismos y una interfaz multilingüe (inglés/español). La app utiliza la API de Board Game Geek para obtener información de los juegos y guarda los nombres de jugadores previamente ingresados para reutilizarlos fácilmente.",
                 "image": "./assets/ui/images/board_game_buddy.png",
                 "role": "Diseñadora y desarrolladora",
                 "technologies": "HTML, Sass y React",
@@ -113,7 +113,7 @@
             {
                 "id": 3,
                 "title": "Juego del ahorcado",
-                "description": "Este fue un proyecto grupal del popular juego del ahorcado desarrollado mientras aprendía React.",
+                "description": "Un proyecto grupal del clásico juego del ahorcado desarrollado durante mi aprendizaje de React. Los jugadores pueden adivinar palabras y enfrentar un diseño interactivo en cada intento fallido.",
                 "image": "./assets/ui/images/hangman.png",
                 "role": "Desarrolladora",
                 "technologies": "HTML, Sass y React",
@@ -122,7 +122,7 @@
             {
                 "id": 4,
                 "title": "Buscador de anime",
-                "description": "Esta es una aplicación web en la que puedes buscar animes obtenidos de una API pública y añadirlos a una lista de favoritos. Además esa lista de favoritos se queda guardada en el navegador para que esté disponible la próxima vez que entres a la página.",
+                "description": "Una aplicación web que permite buscar animes utilizando una API pública y agregarlos a una lista de favoritos que se guarda localmente en el navegador para futuras visitas. La lista se mantiene accesible cada vez que el usuario vuelve.",
                 "image": "./assets/ui/images/anime.png",
                 "role": "Diseñadora y desarrolladora",
                 "technologies": "HTML, Sass y Javascript",
@@ -131,7 +131,7 @@
             {
                 "id": 5,
                 "title": "Maquetación de una página de landing",
-                "description": "Se trata de la maquetación de una página de landing hecha con HTML y Sass en base a un diseño previamente dado.",
+                "description": "Este proyecto consiste en la maquetación de una página de landing, desarrollada en base a un diseño proporcionado. La página está construida utilizando HTML y Sass, con un enfoque en la precisión del diseño.",
                 "image": "./assets/ui/images/layout.png",
                 "role": "Desarrolladora",
                 "technologies": "HTML y Sass",
@@ -139,8 +139,8 @@
             },
             {
                 "id": 6,
-                "title": "Página web presentación de equipo de proyecto",
-                "description": "Esto fue parte de un trabajo en grupo hecho para aprender a construir una página web con HTML y Sass. Se trata de una página responsive donde se hace una introducción a los miembros del equipo en la que además se da un formulario para ponerse en contacto con dichos miembros.",
+                "title": "Página web de presentación de equipo de proyecto",
+                "description": "Un proyecto grupal diseñado para aprender a construir páginas web responsive. Esta página introduce a los miembros de un equipo de proyecto, incluyendo un formulario para ponerse en contacto con ellos.",
                 "image": "./assets/ui/images/team_page.png",
                 "role": "Desarrolladora",
                 "technologies": "HTML y Sass",
@@ -149,7 +149,7 @@
             {
                 "id": 7,
                 "title": "Piedra, papel o tijera",
-                "description": "Esta es una aplicación web responsive en la que se puede jugar al famoso \"Piedra, papel o tijera\" y al final se obtiene un gif divertido dependiendo de si se gana, se pierde o se empata. Y por cierto, el fondo del juego cambia con las estaciones y festividades.",
+                "description": "Una aplicación web responsive del juego Piedra, papel o tijera. Al final de cada partida, se muestra un gif divertido dependiendo del resultado (ganas, pierdes o empatas), y el fondo cambia según la estación del año o festividad.",
                 "image": "./assets/ui/images/rock_paper_scissors.png",
                 "role": "Diseñadora y desarrolladora",
                 "technologies": "HTML, Sass y Javascript",
@@ -158,7 +158,7 @@
             {
                 "id": 8,
                 "title": "Buscador de personajes de Harry Potter",
-                "description": "Se trata de una web responsive en la que puedes buscar personajes de Harry Potter y obtener algo de información básica sobre ellos. Los datos están sacados de una API pública y el diseño es interactivo y cambia conforme a los colores de las casas de Hogwarts.",
+                "description": "Una web responsive para buscar personajes de Harry Potter, con información básica extraída de una API pública. El diseño es interactivo y se adapta al color de la casa de Hogwarts a la que pertenece el personaje.",
                 "image": "./assets/ui/images/harry_potter.png",
                 "role": "Diseñadora y desarrolladora",
                 "technologies": "HTML, Sass y React",
@@ -167,7 +167,7 @@
             {
                 "id": 9,
                 "title": "Creador de tarjetas de visita",
-                "description": "Este fue un proyecto grupal desarrollado mientras aprendía React y NodeJs. Se trata de una aplicación web responsive en la que puedes crear tu propia tarjeta de visita profesional de manera dinámica, eligiendo los colores y la información así como posteándola en las redes sociales en caso de querer hacerlo.",
+                "description": "Un proyecto grupal que utiliza React y NodeJs para crear una aplicación web responsive donde los usuarios pueden diseñar sus propias tarjetas de visita, personalizando colores y contenido. La tarjeta se puede compartir en redes sociales.",
                 "image": "./assets/ui/images/creative_cards.png",
                 "role": "Desarrolladora",
                 "technologies": "HTML, Sass, React y NodeJs",
