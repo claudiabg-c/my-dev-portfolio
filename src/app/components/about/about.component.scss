@@ -332,11 +332,11 @@
                 &.timeline-experience {
                     li {
                         &.bootcamp {
-                            grid-column: 4/6;
+                            grid-column: 4/5;
                             width: 80%;
                         }
                         &.job {
-                            grid-column: 6/9;
+                            grid-column: 5/9;
                             left: 0;
                             width: 100%;
                         }
@@ -349,7 +349,7 @@
                     }
                 }
                 &.timeline-years {
-                    grid-template-columns: repeat(3, 1fr) repeat(3, 2fr);
+                    grid-template-columns: repeat(3, 1fr) repeat(4, 2fr);
                     li {
                         font-size: 10px;
                         &.year-2018, &.year-2019 {
