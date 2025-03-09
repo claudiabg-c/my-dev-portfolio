@@ -202,12 +202,18 @@
                             font-size: 11px;
                         }
                     }
-                    &.job {
-                        grid-column: 5/8;
+                    &.job.hedima {
+                        grid-column: 5/7;
                         width: 115%;
-                        left: -15%;
-                        bottom: 60px;
+                        left: -20%;
+                        bottom: 55px;
                         border-color: $color_7;
+                    }
+                    &.job.bbva {
+                        grid-column: 7/8;
+                        bottom: 65px;
+                        width: 100%;
+                        border-color: $color_2;
                     }
                 }
             }
@@ -320,6 +326,7 @@
                         }
                         &.developer {
                             grid-column: 4/9;
+                            top: -10px;
                         }
                         h3 {
                             font-size: 10px;
@@ -335,8 +342,13 @@
                             grid-column: 4/5;
                             width: 80%;
                         }
-                        &.job {
-                            grid-column: 5/9;
+                        &.job.hedima {
+                            grid-column: 5/7;
+                            left: 0;
+                            width: 100%;
+                        }
+                        &.job.bbva {
+                            grid-column: 7/8;
                             left: 0;
                             width: 100%;
                         }
