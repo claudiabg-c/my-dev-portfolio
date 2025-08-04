@@ -11,7 +11,9 @@
                     <li class="year">{{dataLang.year}}<span>{{project.year}}</span></li>
                 </ul>
             </div>
-            <img class="project-image" [src]="project.image">
+            <a [href]="project.link" class="project-image-link" target="_blank" rel="noopener noreferrer">
+                <img class="project-image" [src]="project.image">
+            </a>
             <button class="prev" (click)="prevProject()" *ngIf="shownProject > 1">{{dataLang.prev}}</button>
             <button class="next" (click)="nextProject()" *ngIf="shownProject < projects.length">{{dataLang.next}}</button>
         </div>

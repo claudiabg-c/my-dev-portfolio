@@ -10,6 +10,7 @@ interface Project {
   role: string;
   technologies: string;
   year: string;
+  link: string;
   class?: string;
 }
 

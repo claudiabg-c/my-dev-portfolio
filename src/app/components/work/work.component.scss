@@ -56,12 +56,16 @@
             left: 0;
             padding: 0 20px;
         }
-        .project-image {
-            object-fit: contain;
-            position: absolute;
-            right: -40px;
-            padding: 30px 0;
-            width: 40%;
+        .project-image-link {
+            .project-image {
+                object-fit: contain;
+                position: absolute;
+                right: -40px;
+                padding: 30px 0;
+                width: 40%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
         .next, .prev {
             color: $color_1;
