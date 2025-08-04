@@ -1,177 +1,172 @@
 {
-    "en": {
-      "rrss_01": "https://www.linkedin.com/in/claudia-berrocal/?locale=en_US",
-      "rrss_02": "https://github.com/claudiabg-c",
-      "about_description": "Hi, I'm Claudia! I'm a hardworking, multidisciplinary web developer with great attention to detail who is always eager to learn new things. The majority of my work as a programmer has been in the front-end development area. For my projects, I particularly enjoy using technologies like Javascript, Angular, HTML, and Sass. I also have some expertise in full-stack development and have had the opportunity to work in the backend area with PHP and Node.js. I value organization and process control. I am methodical, and I find project and people management interesting. Now, on a more personal note, I love reading, movies, and video games. I also really enjoy playing board games and puzzles. Currently, I live in Spain, but nothing ties me down here, so I sometimes consider living elsewhere for a while. I'm always open to new ideas and new challenges and job opportunities!",
-      "projects": [
-        {
-          "id": 1,
-          "title": "Virtual gallery for plastic artist",
-          "description": "An interactive web application designed to simplify board game sessions by helping users manage player inputs and game selection. It features player management, random player ordering, and a multilingual interface (English/Spanish). The app uses the Board Game Geek API to fetch game information and stores data on previously entered player names for easy reuse.",
-          "image": "./assets/ui/images/artist_website.png",
-          "role": "Designer and developer",
-          "technologies": "HTML, Sass, and React",
-          "year": "2024",
-          "link": "https://claudiabg-c.github.io/artist-personal-website/#/"
-        },
-        {
-          "id": 2,
-          "title": "Board Game Buddy",
-          "description": "A web application designed to simplify organizing board game sessions. It allows users to search for games, manage players, and easily set the player order. With multilingual support and a responsive design, it adapts to any device, making your game nights run smoothly.",
-          "image": "./assets/ui/images/board_game_buddy.png",
-          "role": "Designer and Developer",
-          "technologies": "HTML, Sass, and React",
-          "year": "2024",
-          "link": "https://claudiabg-c.github.io/board-game-buddy/"
-        },
-        {
-          "id": 3,
-          "title": "Hangman Game",
-          "description": "A group project recreating the classic hangman game, developed during my learning of React. Players guess letters, with a dynamic and interactive design that reacts to each incorrect guess.",
-          "image": "./assets/ui/images/hangman.png",
-          "role": "Developer",
-          "technologies": "HTML, Sass, and React",
-          "year": "2022",
-          "link": "https://claudiabg-c.github.io/Hangman-game-React/#/"
-        },
-        {
-          "id": 4,
-          "title": "Anime Searcher",
-          "description": "A web application where users can search for anime using a public API and add them to a favorites list. This list is saved locally in the browser and remains accessible upon the user's return to the page.",
-          "image": "./assets/ui/images/anime.png",
-          "role": "Designer and Developer",
-          "technologies": "HTML, Sass, and Javascript",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Anime-search-engine-Javascript/"
-        },
-        {
-          "id": 5,
-          "title": "Rock, Paper, Scissors",
-          "description": "A responsive web application of the Rock, Paper, Scissors game. After each round, a fun gif is displayed depending on whether the player won, lost, or tied. The game background also changes according to seasons or holidays.",
-          "image": "./assets/ui/images/rock_paper_scissors.png",
-          "role": "Designer and Developer",
-          "technologies": "HTML, Sass, and Javascript",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Rock-paper-scissors-Javascript/"
-        },
-        {
-          "id": 6,
-          "title": "Harry Potter Character Finder",
-          "description": "A responsive web app for searching Harry Potter characters, providing basic information from a public API. The design is interactive and adapts to the colors of the character's Hogwarts house.",
-          "image": "./assets/ui/images/harry_potter.png",
-          "role": "Designer and Developer",
-          "technologies": "HTML, Sass, and React",
-          "year": "2022",
-          "link": "https://claudiabg-c.github.io/Harry-Potter-character-searcher-React/#/"
-        },
-        {
-          "id": 7,
-          "title": "Landing Page Layout",
-          "description": "This project is focused on the layout of a landing page based on a provided design. It was developed using HTML and Sass, with attention to detail and design accuracy.",
-          "image": "./assets/ui/images/layout.png",
-          "role": "Developer",
-          "technologies": "HTML and Sass",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Layout-landing-page-HTML5-CSS3/"
-        },
-        {
-          "id": 8,
-          "title": "Project Team Introduction Website",
-          "description": "A group project designed to practice building responsive websites. This site introduces the members of a project team and includes a contact form to get in touch with them.",
-          "image": "./assets/ui/images/team_page.png",
-          "role": "Developer",
-          "technologies": "HTML and Sass",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Team-introduction-page-HTML5-CSS3/"
-        }
-      ]
+    "rrss": {
+        "linkedin": "https://www.linkedin.com/in/claudia-berrocal/",
+        "github": "https://github.com/claudiabg-c"
     },
-    "es": {
-      "rrss_01": "https://www.linkedin.com/in/claudia-berrocal/",
-      "rrss_02": "https://github.com/claudiabg-c",
-      "about_description": "¡Hola, soy Claudia! Soy una desarrolladora web bastante trabajadora, multidisciplinar y con gran atención al detalle que siempre está intentando aprender nuevas cosas. La mayor parte de mi trabajo como programadora ha sido en el área del desarrollo front end (del lado del cliente). Para mis proyectos me gusta utilizar sobre todo tecnologías como Javascript, Angular, HTML y Sass. También tengo conocimiento de desarrollo full stack, y he tenido la oportunidad de trabajar un poco en el área de back con PHP y Node.js. Me gusta la organización y llevar un control de procesos. Soy muy metódica y los temas de gestión de proyectos y personas me parecen interesantes. Ahora en un sentido ya más personal, me encanta leer, las películas y los videojuegos. También me gusta mucho jugar a juegos de mesa y los puzzles. Actualmente vivo en España pero nada me ata aquí, por lo que a veces me llego a plantear vivir en algún otro lugar durante un tiempo. ¡Y siempre estoy abierta a nuevas ideas y nuevos retos y oportunidades laborales!",
-      "projects": [
+    "about": {
+        "en": "Hi, I'm Claudia! I'm a hardworking, multidisciplinary web developer with great attention to detail who is always eager to learn new things. The majority of my work as a programmer has been in the front-end development area. For my projects, I particularly enjoy using technologies like Javascript, Angular, HTML, and Sass. I also have some expertise in full-stack development and have had the opportunity to work in the backend area with PHP and Node.js. I value organization and process control. I am methodical, and I find project and people management interesting. Now, on a more personal note, I love reading, movies, and video games. I also really enjoy playing board games and puzzles. Currently, I live in Spain, but nothing ties me down here, so I sometimes consider living elsewhere for a while. I'm always open to new ideas and new challenges and job opportunities!",
+        "es": "¡Hola, soy Claudia! Soy una desarrolladora web bastante trabajadora, multidisciplinar y con gran atención al detalle que siempre está intentando aprender nuevas cosas. La mayor parte de mi trabajo como programadora ha sido en el área del desarrollo front end (del lado del cliente). Para mis proyectos me gusta utilizar sobre todo tecnologías como Javascript, Angular, HTML y Sass. También tengo conocimiento de desarrollo full stack, y he tenido la oportunidad de trabajar un poco en el área de back con PHP y Node.js. Me gusta la organización y llevar un control de procesos. Soy muy metódica y los temas de gestión de proyectos y personas me parecen interesantes. Ahora en un sentido ya más personal, me encanta leer, las películas y los videojuegos. También me gusta mucho jugar a juegos de mesa y los puzzles. Actualmente vivo en España pero nada me ata aquí, por lo que a veces me llego a plantear vivir en algún otro lugar durante un tiempo. ¡Y siempre estoy abierta a nuevas ideas y nuevos retos y oportunidades laborales!"
+    },
+    "projects": [
         {
-          "id": 1,
-          "title": "Galería virtual para artista plástica",
-          "description": "Una página web interactiva y responsive diseñada para mostrar las obras de arte de Gloria Gómez-Calcerrada. La galería permite a los usuarios explorar diferentes colecciones de pinturas, desde el óleo hasta los grabados y el acrílico. Además, se puede leer sobre la vida de la artista, los eventos y exposiciones en los que ha participado, y su trayectoria artística.",
-          "image": "./assets/ui/images/artist_website.png",
-          "role": "Diseñadora y desarrolladora",
-          "technologies": "HTML, Sass y React",
-          "year": "2024",
-          "link": "https://claudiabg-c.github.io/artist-personal-website/#/"
+            "id": 1,
+            "image": "./assets/ui/images/artist_website.png",
+            "year": "2024",
+            "link": "https://claudiabg-c.github.io/artist-personal-website/#/",
+            "i18n": {
+                "en": {
+                    "title": "Virtual gallery for plastic artist",
+                    "description": "An interactive web application designed to simplify board game sessions by helping users manage player inputs and game selection. It features player management, random player ordering, and a multilingual interface (English/Spanish). The app uses the Board Game Geek API to fetch game information and stores data on previously entered player names for easy reuse.",
+                    "role": "Designer and developer",
+                    "technologies": "HTML, Sass, and React"
+                },
+                "es": {
+                    "title": "Galería virtual para artista plástica",
+                    "description": "Una página web interactiva y responsive diseñada para mostrar las obras de arte de Gloria Gómez-Calcerrada. La galería permite a los usuarios explorar diferentes colecciones de pinturas, desde el óleo hasta los grabados y el acrílico. Además, se puede leer sobre la vida de la artista, los eventos y exposiciones en los que ha participado, y su trayectoria artística.",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y React"
+                }
+            }
         },
         {
-          "id": 2,
-          "title": "Board Game Buddy",
-          "description": "Una aplicación web interactiva diseñada para facilitar las sesiones de juegos de mesa al ayudar a los usuarios a gestionar los jugadores y la selección de juegos. Ofrece gestión de jugadores, orden aleatorio de los mismos y una interfaz multilingüe (inglés/español). La app utiliza la API de Board Game Geek para obtener información de los juegos y guarda los nombres de jugadores previamente ingresados para reutilizarlos fácilmente.",
-          "image": "./assets/ui/images/board_game_buddy.png",
-          "role": "Diseñadora y desarrolladora",
-          "technologies": "HTML, Sass y React",
-          "year": "2024",
-          "link": "https://claudiabg-c.github.io/board-game-buddy/"
+            "id": 2,
+            "image": "./assets/ui/images/board_game_buddy.png",
+            "year": "2024",
+            "link": "https://claudiabg-c.github.io/board-game-buddy/",
+            "i18n": {
+                "en": {
+                    "title": "Board Game Buddy",
+                    "description": "A web application designed to simplify organizing board game sessions. It allows users to search for games, manage players, and easily set the player order. With multilingual support and a responsive design, it adapts to any device, making your game nights run smoothly.",
+                    "role": "Designer and Developer",
+                    "technologies": "HTML, Sass, and React"
+                },
+                "es": {
+                    "title": "Board Game Buddy",
+                    "description": "Una aplicación web interactiva diseñada para facilitar las sesiones de juegos de mesa al ayudar a los usuarios a gestionar los jugadores y la selección de juegos. Ofrece gestión de jugadores, orden aleatorio de los mismos y una interfaz multilingüe (inglés/español). La app utiliza la API de Board Game Geek para obtener información de los juegos y guarda los nombres de jugadores previamente ingresados para reutilizarlos fácilmente.",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y React"
+                }
+            }
         },
         {
-          "id": 3,
-          "title": "Juego del ahorcado",
-          "description": "Un proyecto grupal del clásico juego del ahorcado desarrollado durante mi aprendizaje de React. Los jugadores pueden adivinar palabras y enfrentar un diseño interactivo en cada intento fallido.",
-          "image": "./assets/ui/images/hangman.png",
-          "role": "Desarrolladora",
-          "technologies": "HTML, Sass y React",
-          "year": "2022",
-          "link": "https://claudiabg-c.github.io/Hangman-game-React/#/"
+            "id": 3,
+            "image": "./assets/ui/images/hangman.png",
+            "year": "2022",
+            "link": "https://claudiabg-c.github.io/Hangman-game-React/#/",
+            "i18n": {
+                "en": {
+                    "title": "Hangman Game",
+                    "description": "A group project recreating the classic hangman game, developed during my learning of React. Players guess letters, with a dynamic and interactive design that reacts to each incorrect guess.",
+                    "role": "Developer",
+                    "technologies": "HTML, Sass, and React"
+                },
+                "es": {
+                    "title": "Juego del ahorcado",
+                    "description": "Un proyecto grupal del clásico juego del ahorcado desarrollado durante mi aprendizaje de React. Los jugadores pueden adivinar palabras y enfrentar un diseño interactivo en cada intento fallido.",
+                    "role": "Desarrolladora",
+                    "technologies": "HTML, Sass y React"
+                }
+            }
         },
         {
-          "id": 4,
-          "title": "Buscador de anime",
-          "description": "Una aplicación web que permite buscar animes utilizando una API pública y agregarlos a una lista de favoritos que se guarda localmente en el navegador para futuras visitas. La lista se mantiene accesible cada vez que el usuario vuelve.",
-          "image": "./assets/ui/images/anime.png",
-          "role": "Diseñadora y desarrolladora",
-          "technologies": "HTML, Sass y Javascript",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Anime-search-engine-Javascript/"
+            "id": 4,
+            "image": "./assets/ui/images/anime.png",
+            "year": "2021",
+            "link": "https://claudiabg-c.github.io/Anime-search-engine-Javascript/",
+            "i18n": {
+                "en": {
+                    "title": "Anime Searcher",
+                    "description": "A web application where users can search for anime using a public API and add them to a favorites list. This list is saved locally in the browser and remains accessible upon the user's return to the page.",
+                    "role": "Designer and Developer",
+                    "technologies": "HTML, Sass, and Javascript"
+                },
+                "es": {
+                    "title": "Buscador de anime",
+                    "description": "Una aplicación web que permite buscar animes utilizando una API pública y agregarlos a una lista de favoritos que se guarda localmente en el navegador para futuras visitas. La lista se mantiene accesible cada vez que el usuario vuelve.",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y Javascript"
+                }
+            }
         },
         {
-          "id": 5,
-          "title": "Piedra, papel o tijera",
-          "description": "Una aplicación web responsive del juego Piedra, papel o tijera. Al final de cada partida, se muestra un gif divertido dependiendo del resultado (ganas, pierdes o empatas), y el fondo cambia según la estación del año o festividad.",
-          "image": "./assets/ui/images/rock_paper_scissors.png",
-          "role": "Diseñadora y desarrolladora",
-          "technologies": "HTML, Sass y Javascript",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Rock-paper-scissors-Javascript/"
+            "id": 5,
+            "image": "./assets/ui/images/rock_paper_scissors.png",
+            "year": "2021",
+            "link": "https://claudiabg-c.github.io/Rock-paper-scissors-Javascript/",
+            "i18n": {
+                "en": {
+                    "title": "Rock, Paper, Scissors",
+                    "description": "A responsive web application of the Rock, Paper, Scissors game. After each round, a fun gif is displayed depending on whether the player won, lost, or tied. The game background also changes according to seasons or holidays.",
+                    "role": "Designer and Developer",
+                    "technologies": "HTML, Sass, and Javascript"
+                },
+                "es": {
+                    "title": "Piedra, papel o tijera",
+                    "description": "Una aplicación web responsive del juego Piedra, papel o tijera. Al final de cada partida, se muestra un gif divertido dependiendo del resultado (ganas, pierdes o empatas), y el fondo cambia según la estación del año o festividad.",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y Javascript"
+                }
+            }
         },
         {
-          "id": 6,
-          "title": "Buscador de personajes de Harry Potter",
-          "description": "Una web responsive para buscar personajes de Harry Potter, con información básica extraída de una API pública. El diseño es interactivo y se adapta al color de la casa de Hogwarts a la que pertenece el personaje.",
-          "image": "./assets/ui/images/harry_potter.png",
-          "role": "Diseñadora y desarrolladora",
-          "technologies": "HTML, Sass y React",
-          "year": "2022",
-          "link": "https://claudiabg-c.github.io/Harry-Potter-character-searcher-React/#/"
+            "id": 6,
+            "image": "./assets/ui/images/harry_potter.png",
+            "year": "2022",
+            "link": "https://claudiabg-c.github.io/Harry-Potter-character-searcher-React/#/",
+            "i18n": {
+                "en": {
+                    "title": "Harry Potter Character Finder",
+                    "description": "A responsive web app for searching Harry Potter characters, providing basic information from a public API. The design is interactive and adapts to the colors of the character's Hogwarts house.",
+                    "role": "Designer and Developer",
+                    "technologies": "HTML, Sass, and React"
+                },
+                "es": {
+                    "title": "Buscador de personajes de Harry Potter",
+                    "description": "Una web responsive para buscar personajes de Harry Potter, con información básica extraída de una API pública. El diseño es interactivo y se adapta al color de la casa de Hogwarts a la que pertenece el personaje.",
+                    "role": "Diseñadora y desarrolladora",
+                    "technologies": "HTML, Sass y React"
+                }
+            }
         },
         {
-          "id": 7,
-          "title": "Maquetación de una página de landing",
-          "description": "Este proyecto consiste en la maquetación de una página de landing, desarrollada en base a un diseño proporcionado. La página está construida utilizando HTML y Sass, con un enfoque en la precisión del diseño.",
-          "image": "./assets/ui/images/layout.png",
-          "role": "Desarrolladora",
-          "technologies": "HTML y Sass",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Layout-landing-page-HTML5-CSS3/"
+            "id": 7,
+            "image": "./assets/ui/images/layout.png",
+            "year": "2021",
+            "link": "https://claudiabg-c.github.io/Layout-landing-page-HTML5-CSS3/",
+            "i18n": {
+                "en": {
+                    "title": "Landing Page Layout",
+                    "description": "This project is focused on the layout of a landing page based on a provided design. It was developed using HTML and Sass, with attention to detail and design accuracy.",
+                    "role": "Developer",
+                    "technologies": "HTML and Sass"
+                },
+                "es": {
+                    "title": "Maquetación de una página de landing",
+                    "description": "Este proyecto consiste en la maquetación de una página de landing, desarrollada en base a un diseño proporcionado. La página está construida utilizando HTML y Sass, con un enfoque en la precisión del diseño.",
+                    "role": "Desarrolladora",
+                    "technologies": "HTML y Sass"
+                }
+            }
         },
         {
-          "id": 8,
-          "title": "Página web de presentación de equipo de proyecto",
-          "description": "Un proyecto grupal diseñado para aprender a construir páginas web responsive. Esta página introduce a los miembros de un equipo de proyecto, incluyendo un formulario para ponerse en contacto con ellos.",
-          "image": "./assets/ui/images/team_page.png",
-          "role": "Desarrolladora",
-          "technologies": "HTML y Sass",
-          "year": "2021",
-          "link": "https://claudiabg-c.github.io/Team-introduction-page-HTML5-CSS3/"
+            "id": 8,
+            "image": "./assets/ui/images/team_page.png",
+            "year": "2021",
+            "link": "https://claudiabg-c.github.io/Team-introduction-page-HTML5-CSS3/",
+            "i18n": {
+                "en": {
+                    "title": "Project Team Introduction Website",
+                    "description": "A group project designed to practice building responsive websites. This site introduces the members of a project team and includes a contact form to get in touch with them.",
+                    "role": "Developer",
+                    "technologies": "HTML and Sass"
+                },
+                "es": {
+                    "title": "Página web de presentación de equipo de proyecto",
+                    "description": "Un proyecto grupal diseñado para aprender a construir páginas web responsive. Esta página introduce a los miembros de un equipo de proyecto, incluyendo un formulario para ponerse en contacto con ellos.",
+                    "role": "Desarrolladora",
+                    "technologies": "HTML y Sass"
+                }
+            }
         }
-      ]
-    }
-  }
-  
+    ]
+}

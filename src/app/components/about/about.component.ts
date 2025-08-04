@@ -37,11 +37,14 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  GetData(){
+  GetData() {
     this._dataAPI.getContent().subscribe(res => {
-      this.data = res[this.lang];
+      this.data = {
+        about_description: res.about?.[this.lang] || ''
+      };
+  
       if (this.debug) {
-        console.log("****** DATA: ", this.data);
+        console.log("****** ABOUT DESCRIPTION: ", this.data.about_description);
       }
     });
   }

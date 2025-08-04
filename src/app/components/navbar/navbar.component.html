@@ -14,8 +14,8 @@
             <span>{{dataLang.resume}}</span>
         </button>
         <div class="social-media language">
-            <a [href]="data.rrss_01" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a [href]="data.rrss_02" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a *ngIf="rrss.linkedin" [href]="rrss.linkedin" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a *ngIf="rrss.github" [href]="rrss.github" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
             <div class="dropdown">
                 <button class="dropbtn" [title]="selectLang" (click)="showOtherLangs()">
                     <img [src]="langData.flag" alt="langData.name">

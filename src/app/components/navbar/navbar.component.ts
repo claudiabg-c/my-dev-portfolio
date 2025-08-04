@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit {
   public dataLang: any = [];
   public langData: any = [];
   public otherLangData: any = [];
+  public rrss: any = {};
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -55,9 +56,10 @@ export class NavbarComponent implements OnInit {
     this._dataAPI.getContent().subscribe(res => {
       this.data = res[this.lang];
 
+      this.rrss = res.rrss;
       if (this.debug) {
-        console.log("****** DATA: ");
-        console.log(this.data);
+        console.log("****** DATA: ", this.data);
+        console.log("****** RRSS: ", this.rrss);
       }
     });
   }

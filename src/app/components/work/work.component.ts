@@ -4,14 +4,14 @@ import { ActivatedRoute } from '@angular/router';
 
 interface Project {
   id: number;
-  title: string;
-  description: string;
   image: string;
-  role: string;
-  technologies: string;
   year: string;
   link: string;
   class?: string;
+  title: string;
+  description: string;
+  role: string;
+  technologies: string;
 }
 
 @Component({
@@ -43,18 +43,17 @@ export class WorkComponent implements OnInit {
 
   GetData() {
     this._dataAPI.getContent().subscribe(res => {
-      const loadedProjects = res[this.lang].projects as Project[];
-
-      this.projects = loadedProjects.map((project: Project, index: number) => ({
-        ...project,
-        id: index + 1,
-        class: (index + 1 === this.shownProject) ? 'shown' : 'd-none'
-      }));
-
-      if (this.debug) {
-        console.log("*** TOTAL PROJECTS: ", this.projects.length);
-        this.projects.forEach((project: Project) => console.log("****** EACH PROJECT DATA: ", project));
-      }
+      const loadedProjects = res.projects as Project[];
+  
+      this.projects = loadedProjects.map((project: any, index: number) => {
+        const i18n = project.i18n[this.lang];
+        return {
+          ...project,
+          ...i18n,
+          id: index + 1,
+          class: (index + 1 === this.shownProject) ? 'shown' : 'd-none'
+        };
+      });
     });
   }
 
