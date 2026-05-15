@@ -1,30 +1,82 @@
 @import '../../../assets/ui/css/variables.scss';
-
 .header {
-    position: relative;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     max-width: 1900px;
     margin: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     .header-info {
         padding: 90px;
-        max-width: 40vw;
+        max-width: 720px;
         position: relative;
         background-color: transparent;
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         z-index: 1;
+        p, div {
+            background-color: transparent;
+        }
+        .eyebrow {
+            color: $color_2;
+            font-family: 'Roboto Mono-Regular';
+            font-size: 14px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
         .name {
             text-transform: uppercase;
-            font-size: 90px;
-            padding-bottom: 30px;
+            font-size: 88px;
+            line-height: .95;
+            padding-bottom: 28px;
             border-bottom: 5px solid $color_4;
             background-color: transparent;
         }
         .job {
-            padding-top: 30px;
+            padding-top: 28px;
             background-color: transparent;
+            color: $color_2;
+            font-size: 28px;
+        }
+        .intro {
+            max-width: 560px;
+            margin-top: 24px;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+        .header-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 34px;
+            button {
+                padding: 13px 24px;
+                font-family: 'Roboto Mono-Regular';
+                font-size: 13px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }
+            .primary-btn {
+                background-color: $color_2;
+                color: $color_1;
+                border: 1px solid $color_2;
+                &:hover {
+                    background-color: transparent;
+                    color: $color_2;
+                }
+            }
+            .secondary-btn {
+                background-color: transparent;
+                color: $color_2;
+                border: 1px solid $color_4;
+                &:hover {
+                    border-color: $color_2;
+                }
+            }
         }
     }
     .header-img {
@@ -32,7 +84,6 @@
         right: 40px;
         width: 60vw;
         z-index: 0;
-        display: inline-block;
         background-color: $background_color;
         height: 100%;
         top: 0;
@@ -74,76 +125,33 @@
             }
         }
     }
-    .arrow-down {
-        cursor: pointer;
-		background-position: center;
-		background: transparent;
-		display: flex;
-		position: relative;
-		font-size: 0.9rem;
-		justify-content: center;
-		height: 50px;
-		margin: 0 auto;
-		margin-top: 30px;
-		animation: pulses 2.5s infinite ease-in-out;
-		width: 260px;
-		&:after {
-			content: '';
-			display: block;
-			width: 20px;
-			height: 20px;
-			border: solid $color_2;
-			border-width: 0 5px 5px 0;
-			transform: rotate(45deg);
-			position: absolute;
-			top: -30px;
-		}
-        &.scrolled {
-            cursor: auto;
-            &::after {
-                opacity: 0;
-                transition: all 1s ease-in-out;
-            }
-        }
-    }
 }
-
-@keyframes pulses {
-	0% { transform: scale(1); }
-    50% { transform: scale(.8); opacity: .4;}
-    100% { transform: scale(1); }
-}
-
 @media screen and (max-width: 1024px) {
     .header {
         .header-info {
-            padding: 50px;
-            max-width: 80vw;
+            padding: 60px;
+            max-width: 680px;
             .name {
-                font-size: 60px;
-                max-width: 50%;
+                font-size: 64px;
             }
         }
         .header-img {
-            right: 0;
-            width: 100vw;
-            justify-content: flex-end;
-            padding-right: 50px;
+            right: -100px;
             .first-layer {
-                height: 500px;
-                min-width: 500px;
+                height: 560px;
+                min-width: 560px;
                 .second-layer {
-                    height: 400px;
-                    width: 400px;
+                    height: 420px;
+                    width: 420px;
                     .third-layer {
-                        height: 300px;
-                        width: 300px;
+                        height: 310px;
+                        width: 310px;
                         .fourth-layer {
-                            height: 200px;
-                            width: 200px;
+                            height: 210px;
+                            width: 210px;
                             .header-picture {
-                                height: 200px;
-                                width: 200px;
+                                height: 210px;
+                                width: 210px;
                             }
                         }
                     }
@@ -152,26 +160,33 @@
         }
     }
 }
-
 @media screen and (max-width: 768px) {
     .header {
-        height: auto;
-        padding-top: 200px;
+        min-height: auto;
+        padding-top: 110px;
         display: flex;
         flex-direction: column-reverse;
+        align-items: flex-start;
         .header-info {
-            padding: 50px;
-            width: 50%;
+            padding: 45px 35px 60px;
+            max-width: 100%;
             .name {
-                font-size: 40px;
-                max-width: 100%;
+                font-size: 46px;
+            }
+            .job {
+                font-size: 22px;
+            }
+            .intro {
+                font-size: 16px;
             }
         }
         .header-img {
-            right: 0;
-            width: 100vw;
+            position: relative;
+            right: auto;
+            width: 100%;
+            height: auto;
             justify-content: flex-end;
-            padding-right: 50px;
+            padding-right: 30px;
             .first-layer {
                 height: 300px;
                 min-width: 300px;
@@ -185,35 +200,34 @@
                             height: 150px;
                             width: 150px;
                             .header-picture {
-                                height: 100px;
-                                width: 100px;
+                                height: 120px;
+                                width: 120px;
                             }
                         }
                     }
                 }
             }
         }
-        .arrow-down {
-            display: none;
-        }
     }
 }
-
 @media screen and (max-width: 425px) {
     .header {
         .header-info {
-            padding: 50px 20px 30px;
-            width: 100%;
+            padding: 35px 20px 45px;
             .name {
-                font-size: 30px;
-                max-width: 100%;
+                font-size: 34px;
             }
-            .job {
-                max-width: 50%;
+            .header-actions {
+                flex-direction: column;
+                align-items: stretch;
+                button {
+                    width: 100%;
+                }
             }
         }
         .header-img {
             padding-right: 0;
+            justify-content: center;
         }
     }
 }

@@ -10,9 +10,9 @@ import { DataService } from '../../services/data.service';
 })
 export class HeaderComponent implements OnInit {
 
-  private debug: boolean = true;
+  private debug: boolean = false;
 
-  public lang: string = "";
+  public lang: string = '';
   public dataLang: any = [];
   public header: any = [];
 
@@ -22,36 +22,27 @@ export class HeaderComponent implements OnInit {
     public _router: Router
   ) {
     this._activeRouter.params.subscribe(params => {
-      if (this.debug) {console.log('*** LOADING PARAMS...', params);}
+      if (this.debug) { console.log('*** LOADING PARAMS...', params); }
       this.lang = params['lang'];
     });
   }
 
   ngOnInit(): void {
     this.GetDataLang(this.lang);
-    this.hideArrow();
   }
 
-  GetDataLang(lang: string) {
+  GetDataLang(lang: string): void {
     this._dataAPI.getContentLang().subscribe(res => {
       this.dataLang = res[lang];
     });
   }
-  
-  addParallax():void {
-    this.header = document.querySelector('header');
-  }
 
-  hideArrow() {
-    const arrow = document.querySelector('.arrow-down')
-    const onScroll = () => {
-      const scroll = document.documentElement.scrollTop;
-      if (scroll > 0) {
-        arrow?.classList.add('scrolled');
-      } else {
-        arrow?.classList.remove('scrolled')
-      }
-    }
-    window.addEventListener('scroll', onScroll)
-  };
+  scrollToSection(sectionId: string): void {
+    const section = document.getElementById(sectionId);
+
+    section?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
 }
