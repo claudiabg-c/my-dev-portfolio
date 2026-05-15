@@ -1,114 +1,83 @@
 <section class="about" id="about-me">
-    <section class="technologies">
-        <h1 class="title">{{dataLang.technologies}}</h1>
+    <section class="about-me-info">
+        <p class="section-kicker">{{dataLang.about}}</p>
+        <h2 class="section-title"> {{lang === 'es' ? 'Frontend con mirada de diseño y experiencia de usuario' :
+            'Frontend with a design and user experience mindset'}} </h2>
+        <p class="description">{{data.about_description}}</p>
+    </section>
+    <section class="skills-section">
+        <p class="section-kicker">{{dataLang.technologies}}</p>
+        <div class="skills-grid">
+            <article class="skill-card">
+                <h3>Frontend</h3>
+                <p>Angular · React · JavaScript · HTML5 · CSS3 · Sass</p>
+            </article>
+            <article class="skill-card">
+                <h3>{{lang === 'es' ? 'Herramientas' : 'Tools'}}</h3>
+                <p>Git · Jira · Bootstrap · Node.js</p>
+            </article>
+            <article class="skill-card">
+                <h3>{{lang === 'es' ? 'También he trabajado con' : 'Also worked with'}}</h3>
+                <p>PHP · SQL · jQuery · Gulp · Grunt</p>
+            </article>
+        </div>
+    </section>
+    <section class="technologies" aria-label="Technologies">
         <div class="technologies-image">
-            <a href="https://angular.io/" target="_blank" class="angular">
-                <img src="./assets/ui/images/angular.svg" alt="Angular">
-                <span class="tech-name">Angular</span>
+            <a href="https://angular.io/" target="_blank" rel="noopener noreferrer" class="angular"
+                aria-label="Angular">
+                <img src="./assets/ui/images/angular.svg" alt="Angular" loading="lazy">
             </a>
-            <a href="https://www.javascript.com/" target="_blank" class="javascript">
-                <img src="./assets/ui/images/javascript.svg" alt="Javascript">
-                <span class="tech-name">Javascript</span>
+            <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer" class="javascript"
+                aria-label="JavaScript">
+                <img src="./assets/ui/images/javascript.svg" alt="Javascript" loading="lazy">
             </a>
-            <a href="https://reactjs.org/" target="_blank" class="react">
-                <img src="./assets/ui/images/react.svg" alt="React">
-                <span class="tech-name">React</span>
+            <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" class="react" aria-label="React">
+                <img src="./assets/ui/images/react.svg" alt="React" loading="lazy">
             </a>
-            <a href="https://getbootstrap.com/" target="_blank" class="bootstrap">
-                <img src="./assets/ui/images/bootstrap.svg" alt="Bootstrap">
-                <span class="tech-name">Bootstrap</span>
+            <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" class="sass" aria-label="Sass">
+                <img src="./assets/ui/images/sass.svg" alt="Sass" loading="lazy">
             </a>
-            <a href="https://sass-lang.com/" target="_blank" class="sass">
-                <img src="./assets/ui/images/sass.svg" alt="Sass">
-                <span class="tech-name">Sass</span>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"
+                class="html" aria-label="HTML5">
+                <img src="./assets/ui/images/html.svg" alt="Html" loading="lazy">
             </a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="html">
-                <img src="./assets/ui/images/html.svg" alt="Html">
-                <span class="tech-name">HTML5</span>
-            </a>
-            <a href="https://jquery.com/" target="_blank" class="jquery">
-                <img src="./assets/ui/images/jquery.svg" alt="jQuery">
-                <span class="tech-name">jQuery</span>
-            </a>
-            <a href="https://gruntjs.com/" target="_blank" class="grunt">
-                <img src="./assets/ui/images/grunt.svg" alt="Grunt">
-                <span class="tech-name">Grunt</span>
-            </a>
-            <a href="https://gulpjs.com/" target="_blank" class="gulp">
-                <img src="./assets/ui/images/gulp.svg" alt="Gulp">
-                <span class="tech-name">Gulp</span>
-            </a>
-            <a href="https://nodejs.org/" target="_blank" class="nodejs">
-                <img src="./assets/ui/images/nodejs.svg" alt="NodeJs">
-                <span class="tech-name">Node.js</span>
-            </a>
-            <a href="https://git-scm.com/" target="_blank" class="git">
-                <img src="./assets/ui/images/git.svg" alt="Git">
-                <span class="tech-name">Git</span>
-            </a>
-            <a href="https://www.php.net/" target="_blank" class="php">
-                <img src="./assets/ui/images/php.svg" alt="Php">
-                <span class="tech-name">PHP</span>
-            </a>
-            <a href="https://www.w3schools.com/sql/" target="_blank" class="sql">
-                <img src="./assets/ui/images/sql.svg" alt="SQL">
-                <span class="tech-name">SQL</span>
-            </a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="css">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
+                class="css" aria-label="CSS3">
                 <img src="./assets/ui/images/css3.svg" alt="CSS" loading="lazy">
-                <span class="tech-name">CSS3</span>
             </a>
-            <a href="https://www.atlassian.com/software/jira" target="_blank" class="jira">
-                <img src="./assets/ui/images/jira.svg" alt="Jira" loading="lazy">
-                <span class="tech-name">Jira</span>
+            <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="git" aria-label="Git">
+                <img src="./assets/ui/images/git.svg" alt="Git" loading="lazy">
+            </a>
+            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" class="nodejs" aria-label="Node.js">
+                <img src="./assets/ui/images/nodejs.svg" alt="NodeJs" loading="lazy">
             </a>
         </div>
     </section>
-    <section class="about-me-info">
-        <h1 class="title-info">{{dataLang.about}}</h1>
-        <p class="description">{{data.about_description}}</p>
-    </section>
     <section class="timeline">
-        <h2 class="title">{{dataLang.timeline}}</h2>
-        <ul class="timeline-professions">
-            <li class="lawyer">
-                <h3>2017-2020</h3>
-                <h4>{{dataLang.previousjob1}}</h4>
-            </li>
-            <li class="teacher">
-                <h3>2020-2021</h3>
-                <h4>{{dataLang.previousjob2}}</h4>
-            </li>
-            <li class="developer">
-                <h3>2021-{{dataLang.now}}</h3>
-                <h4>{{dataLang.job}}</h4>
-            </li>
-        </ul>
-        <ul class="timeline-experience">
-            <li class="bootcamp">
-                <h5>2021-2022</h5>
-                <h6>Bootcamp Adalab</h6>
-            </li>
-            <li class="job hedima">
-                <h5>2022-2024</h5>
-                <h6>Grupo Hedima</h6>
-            </li>
-            <li class="job bbva">
-                <h5>2024-{{dataLang.now}}</h5>
-                <h6>BBVA Technology</h6>
-            </li>
-        </ul>
-        <ul class="timeline-years">
-            <li class="year-2017">2017</li>
-            <li class="year-2018">2018</li>
-            <li class="year-2019">2019</li>
-            <li class="year-2020">2020</li>
-            <li class="year-2021">2021</li>
-            <li class="year-2022">2022</li>
-            <li class="year-2023">2023</li>
-            <li class="year-2024">2024</li>
-            <li class="year-2025">2025</li>
-            <li class="year-2026">2026</li>
-        </ul>
+        <p class="section-kicker">{{dataLang.timeline}}</p>
+        <div class="timeline-list">
+            <article class="timeline-item">
+                <span>2024 — {{dataLang.now}}</span>
+                <h3>{{dataLang.job}}</h3>
+                <p>BBVA Technology</p>
+            </article>
+            <article class="timeline-item">
+                <span>2022 — 2024</span>
+                <h3>{{dataLang.job}}</h3>
+                <p>Grupo Hedima</p>
+            </article>
+            <article class="timeline-item">
+                <span>2021 — 2022</span>
+                <h3>Bootcamp Adalab</h3>
+                <p>{{lang === 'es' ? 'Formación intensiva en desarrollo frontend' : 'Intensive frontend development
+                    training'}}</p>
+            </article>
+            <article class="timeline-item">
+                <span>2017 — 2021</span>
+                <h3>{{lang === 'es' ? 'Etapa previa' : 'Previous background'}}</h3>
+                <p>{{dataLang.previousjob1}} · {{dataLang.previousjob2}}</p>
+            </article>
+        </div>
     </section>
 </section>

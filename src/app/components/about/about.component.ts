@@ -10,18 +10,15 @@ import { DataService } from '../../services/data.service';
 })
 export class AboutComponent implements OnInit {
 
-  private debug: boolean = false;
-
-  public lang: string = "";
-  public dataLang: any = [];
-  public data: any = [];
+  public lang: string = '';
+  public dataLang: any = {};
+  public data: any = {};
 
   constructor(
     private _activeRouter: ActivatedRoute,
     private _dataAPI: DataService
   ) {
     this._activeRouter.params.subscribe(params => {
-      if (this.debug) {console.log('*** LOADING PARAMS...'); console.log(params);}
       this.lang = params['lang'];
     });
   }
@@ -31,21 +28,17 @@ export class AboutComponent implements OnInit {
     this.GetData();
   }
 
-  GetDataLang(lang: string) {
+  GetDataLang(lang: string): void {
     this._dataAPI.getContentLang().subscribe(res => {
       this.dataLang = res[lang];
     });
   }
 
-  GetData() {
+  GetData(): void {
     this._dataAPI.getContent().subscribe(res => {
       this.data = {
         about_description: res.about?.[this.lang] || ''
       };
-  
-      if (this.debug) {
-        console.log("****** ABOUT DESCRIPTION: ", this.data.about_description);
-      }
     });
   }
 }
