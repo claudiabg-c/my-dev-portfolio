@@ -1,29 +1,25 @@
 <header class="header">
     <section class="header-info">
-        <p class="eyebrow">Portfolio</p>
+        <p class="eyebrow">{{data.portfolio}}</p>
         <h1 class="name">Claudia Berrocal</h1>
         <h2 class="job">{{dataLang.job}}</h2>
-        <p class="intro">
-            {{lang === 'es'
-                ? 'Desarrolladora frontend enfocada en crear interfaces limpias, responsive y fáciles de usar.'
-                : 'Frontend developer focused on creating clean, responsive and user-friendly interfaces.'}}
-        </p>
+        <p class="intro"> {{data.hero_description}} </p>
         <div class="header-actions">
-            <button type="button" class="primary-btn" (click)="scrollToSection('work')">
-                {{lang === 'es' ? 'Ver proyectos' : 'View projects'}}
+            <button type="button" class="primary-btn" (click)="scrollToSection('work')"> {{data.view_projects}}
             </button>
-            <button type="button" class="secondary-btn" (click)="scrollToSection('contact')">
-                {{dataLang.contact}}
+            <button type="button" class="secondary-btn" (click)="scrollToSection('contact')"> {{dataLang.contact}}
             </button>
         </div>
     </section>
-
     <section class="header-img" aria-hidden="true">
         <div class="first-layer">
             <div class="second-layer">
                 <div class="third-layer">
                     <div class="fourth-layer">
-                        <img class="header-picture" src="./assets/ui/images/header_picture.svg" alt="{{dataLang.header_picture}}">
+                        <img
+                            class="header-picture"
+                            src="./assets/ui/images/header_picture.svg"
+                            alt="{{dataLang.header_picture}}">
                     </div>
                 </div>
             </div>

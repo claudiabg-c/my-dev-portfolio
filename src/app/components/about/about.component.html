@@ -1,61 +1,122 @@
 <section class="about" id="about-me">
     <section class="about-me-info">
         <p class="section-kicker">{{dataLang.about}}</p>
-        <h2 class="section-title"> {{lang === 'es' ? 'Frontend con mirada de diseño y experiencia de usuario' :
-            'Frontend with a design and user experience mindset'}} </h2>
-        <p class="description">{{data.about_description}}</p>
+        <h2 class="section-title"> {{homeData.hero_title}} </h2>
+        <p class="description"> {{data.about_description}} </p>
     </section>
     <section class="skills-section">
         <p class="section-kicker">{{dataLang.technologies}}</p>
         <div class="skills-grid">
             <article class="skill-card">
-                <h3>Frontend</h3>
+                <h3>{{homeData.frontend}}</h3>
                 <p>Angular · React · JavaScript · HTML5 · CSS3 · Sass</p>
             </article>
             <article class="skill-card">
-                <h3>{{lang === 'es' ? 'Herramientas' : 'Tools'}}</h3>
+                <h3>{{homeData.tools}}</h3>
                 <p>Git · Jira · Bootstrap · Node.js</p>
             </article>
             <article class="skill-card">
-                <h3>{{lang === 'es' ? 'También he trabajado con' : 'Also worked with'}}</h3>
+                <h3>{{homeData.also_worked_with}}</h3>
                 <p>PHP · SQL · jQuery · Gulp · Grunt</p>
             </article>
         </div>
     </section>
-    <section class="technologies" aria-label="Technologies">
+    <section
+        class="technologies"
+        [attr.aria-label]="homeData.technologies_aria_label">
         <div class="technologies-image">
-            <a href="https://angular.io/" target="_blank" rel="noopener noreferrer" class="angular"
+            <a
+                href="https://angular.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="angular"
                 aria-label="Angular">
-                <img src="./assets/ui/images/angular.svg" alt="Angular" loading="lazy">
+                <img
+                    src="./assets/ui/images/angular.svg"
+                    alt="Angular"
+                    loading="lazy">
             </a>
-            <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer" class="javascript"
+            <a
+                href="https://www.javascript.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="javascript"
                 aria-label="JavaScript">
-                <img src="./assets/ui/images/javascript.svg" alt="Javascript" loading="lazy">
+                <img
+                    src="./assets/ui/images/javascript.svg"
+                    alt="Javascript"
+                    loading="lazy">
             </a>
-            <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" class="react" aria-label="React">
-                <img src="./assets/ui/images/react.svg" alt="React" loading="lazy">
+            <a
+                href="https://reactjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="react"
+                aria-label="React">
+                <img
+                    src="./assets/ui/images/react.svg"
+                    alt="React"
+                    loading="lazy">
             </a>
-            <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" class="sass" aria-label="Sass">
-                <img src="./assets/ui/images/sass.svg" alt="Sass" loading="lazy">
+            <a
+                href="https://sass-lang.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sass"
+                aria-label="Sass">
+                <img
+                    src="./assets/ui/images/sass.svg"
+                    alt="Sass"
+                    loading="lazy">
             </a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"
-                class="html" aria-label="HTML5">
-                <img src="./assets/ui/images/html.svg" alt="Html" loading="lazy">
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="html"
+                aria-label="HTML5">
+                <img
+                    src="./assets/ui/images/html.svg"
+                    alt="Html"
+                    loading="lazy">
             </a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
-                class="css" aria-label="CSS3">
-                <img src="./assets/ui/images/css3.svg" alt="CSS" loading="lazy">
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="css"
+                aria-label="CSS3">
+                <img
+                    src="./assets/ui/images/css3.svg"
+                    alt="CSS"
+                    loading="lazy">
             </a>
-            <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="git" aria-label="Git">
-                <img src="./assets/ui/images/git.svg" alt="Git" loading="lazy">
+            <a
+                href="https://git-scm.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="git"
+                aria-label="Git">
+                <img
+                    src="./assets/ui/images/git.svg"
+                    alt="Git"
+                    loading="lazy">
             </a>
-            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" class="nodejs" aria-label="Node.js">
-                <img src="./assets/ui/images/nodejs.svg" alt="NodeJs" loading="lazy">
+            <a
+                href="https://nodejs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nodejs"
+                aria-label="Node.js">
+                <img
+                    src="./assets/ui/images/nodejs.svg"
+                    alt="NodeJs"
+                    loading="lazy">
             </a>
         </div>
     </section>
     <section class="timeline">
-        <p class="section-kicker">{{dataLang.timeline}}</p>
+        <p class="section-kicker"> {{dataLang.timeline}} </p>
         <div class="timeline-list">
             <article class="timeline-item">
                 <span>2024 — {{dataLang.now}}</span>
@@ -70,12 +131,11 @@
             <article class="timeline-item">
                 <span>2021 — 2022</span>
                 <h3>Bootcamp Adalab</h3>
-                <p>{{lang === 'es' ? 'Formación intensiva en desarrollo frontend' : 'Intensive frontend development
-                    training'}}</p>
+                <p>{{homeData.intensive_training}}</p>
             </article>
             <article class="timeline-item">
                 <span>2017 — 2021</span>
-                <h3>{{lang === 'es' ? 'Etapa previa' : 'Previous background'}}</h3>
+                <h3>{{homeData.previous_background}}</h3>
                 <p>{{dataLang.previousjob1}} · {{dataLang.previousjob2}}</p>
             </article>
         </div>

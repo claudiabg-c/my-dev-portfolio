@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   public lang: string = '';
   public dataLang: any = [];
+  public data: any = {};
   public header: any = [];
 
   constructor(
@@ -29,11 +30,18 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetDataLang(this.lang);
+    this.GetData();
   }
 
   GetDataLang(lang: string): void {
     this._dataAPI.getContentLang().subscribe(res => {
       this.dataLang = res[lang];
+    });
+  }
+
+  GetData(): void {
+    this._dataAPI.getContent().subscribe(res => {
+      this.data = res.home?.[this.lang] || {};
     });
   }
 

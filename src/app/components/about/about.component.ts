@@ -13,6 +13,7 @@ export class AboutComponent implements OnInit {
   public lang: string = '';
   public dataLang: any = {};
   public data: any = {};
+  public homeData: any = {};
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -39,6 +40,9 @@ export class AboutComponent implements OnInit {
       this.data = {
         about_description: res.about?.[this.lang] || ''
       };
+      this._dataAPI.getContent().subscribe(res => {
+        this.homeData = res.home?.[this.lang] || {};
+      });
     });
   }
 }

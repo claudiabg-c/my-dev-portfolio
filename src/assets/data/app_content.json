@@ -1,4 +1,30 @@
 {
+    "home": {
+        "en": {
+            "portfolio": "Portfolio",
+            "hero_title": "A frontend with a design and user experience mindset",
+            "hero_description": "Frontend developer focused on creating clean, responsive and user-friendly interfaces.",
+            "view_projects": "View projects",
+            "frontend": "Frontend",
+            "tools": "Tools",
+            "also_worked_with": "Also worked with",
+            "intensive_training": "Intensive frontend development training",
+            "previous_background": "Previous background",
+            "technologies_aria_label": "Technologies"
+        },
+        "es": {
+            "portfolio": "Portfolio",
+            "hero_title": "Un frontend orientado en el diseño y la experiencia de usuario",
+            "hero_description": "Desarrolladora frontend enfocada en crear interfaces limpias, responsive y fáciles de usar.",
+            "view_projects": "Ver proyectos",
+            "frontend": "Frontend",
+            "tools": "Herramientas",
+            "also_worked_with": "También he trabajado con",
+            "intensive_training": "Formación intensiva en desarrollo frontend",
+            "previous_background": "Etapa previa",
+            "technologies_aria_label": "Tecnologías"
+        }
+    },
     "rrss": {
         "linkedin": "https://www.linkedin.com/in/claudia-berrocal/",
         "github": "https://github.com/claudiabg-c"
@@ -168,5 +194,62 @@
                 }
             }
         }
-    ]
+    ],
+    "contact": {
+        "en": {
+            "section_label": "Contact",
+            "title": "Let’s work together",
+            "description": "If you have a proposal, a question or just want to say hello, you can write to me through this form.",
+            "name_label": "Name:",
+            "email_label": "Email:",
+            "message_label": "Message:",
+            "name_required": "Name is required. Nobody likes anonymous messages ;)",
+            "email_required": "Email is required so I can reply to you.",
+            "email_invalid": "Please check the email format.",
+            "message_required": "Please write a message. And if it is a nice one, even better 🤍",
+            "form_note": "You can also find me on LinkedIn or GitHub from the top navigation.",
+            "submit": "Send",
+            "sending": "Sending...",
+            "error": "The form could not be sent. Please try again in a few minutes.",
+            "thanks_title": "Thank you for your message!",
+            "thanks_text": "I will reply as soon as possible."
+        },
+        "es": {
+            "section_label": "Contacto",
+            "description": "Si tienes una propuesta, una duda o simplemente quieres saludar, puedes escribirme desde este formulario.",
+            "name_label": "Nombre:",
+            "email_label": "Correo electrónico:",
+            "message_label": "Mensaje:",
+            "name_required": "El nombre es necesario. A nadie le gusta recibir anónimos ;)",
+            "email_required": "El correo electrónico es necesario para que pueda responderte.",
+            "email_invalid": "Revisa el formato del correo electrónico.",
+            "message_required": "Por favor, escribe un mensaje. Y si es bonito, mejor 🤍",
+            "form_note": "También puedes encontrarme en LinkedIn o GitHub desde la navegación superior.",
+            "submit": "Enviar",
+            "sending": "Enviando...",
+            "error": "No se ha podido enviar el formulario. Inténtalo de nuevo en unos minutos.",
+            "thanks_title": "¡Gracias por tu mensaje!",
+            "thanks_text": "Te responderé lo antes posible."
+        }
+    },
+    "footer": {
+        "en": {
+            "section_label": "Portfolio",
+            "name": "Claudia Berrocal",
+            "job": "Frontend Developer",
+            "email": "claudia.berrocalgomez@gmail.com",
+            "email_aria_label": "Send email to Claudia Berrocal",
+            "email_section_aria_label": "Email contact",
+            "copy": "Made with 🩵 Claudia Berrocal"
+        },
+        "es": {
+            "section_label": "Portfolio",
+            "name": "Claudia Berrocal",
+            "job": "Desarrolladora Frontend",
+            "email": "claudia.berrocalgomez@gmail.com",
+            "email_aria_label": "Enviar email a Claudia Berrocal",
+            "email_section_aria_label": "Contacto por email",
+            "copy": "Hecho con 🩵 por Claudia Berrocal"
+        }
+    }
 }
