@@ -1,15 +1,29 @@
 <section class="footer" id="footer">
-    <section class="email-container">
-        <div class="first-layer">
-            <div class="second-layer">
-                <p class="email">claudia.berrocalgomez@gmail.com</p>
+    <div class="footer-content">
+        <section class="footer-main">
+            <p class="footer-label">{{data.section_label}}</p>
+            <h2>{{data.name}}</h2>
+            <p class="footer-text">{{data.job}}</p>
+        </section>
+
+        <section class="email-container" [attr.aria-label]="data.email_section_aria_label">
+            <div class="first-layer">
+                <div class="second-layer">
+                    <a
+                        class="email"
+                        [href]="'mailto:' + data.email"
+                        [attr.aria-label]="data.email_aria_label">
+                        {{data.email}}
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-    <p class="copy">Made with 🩵 Claudia Berrocal &copy; {{ year }}</p>
-    <div class="bottom-svg">
-        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-            style="fill: #9acaf8; width: 400%; height: 180px; transform: rotate(180deg);">
+        </section>
+    </div>
+
+    <p class="copy">{{data.copy}} &copy; {{ year }}</p>
+
+    <div class="bottom-svg" aria-hidden="true">
+        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
                 opacity=".25" />
