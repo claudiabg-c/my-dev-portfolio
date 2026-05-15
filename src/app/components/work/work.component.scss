@@ -1,206 +1,254 @@
 @import '../../../assets/ui/css/variables.scss';
-
 #work {
-    padding-top: 100px;
     max-width: 1700px;
     margin: auto;
-    .each-project {
-        height: calc(100vh - 230px);
-        margin: 50px 100px 150px;
-        border: solid 2px $color_4;
-        padding: 80px;
-        justify-items: center;
+    padding: 120px 70px 90px;
+    .work-header {
+        max-width: 850px;
+        margin-bottom: 40px;
+        .section-kicker {
+            color: $color_2;
+            font-family: 'Roboto Mono-Regular';
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .section-title {
+            color: $color_2;
+            font-family: 'Uchen-Regular';
+            font-size: 64px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .section-description {
+            max-width: 650px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+    }
+    .project-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 50px;
+        button {
+            border: 1px solid $color_4;
+            color: $color_2;
+            background-color: transparent;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-family: 'Roboto Mono-Regular';
+            font-size: 13px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            &:hover,
+            &.active {
+                background-color: $color_2;
+                color: $color_1;
+                border-color: $color_2;
+            }
+        }
+    }
+    .featured-project {
+        display: grid;
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+        gap: 50px;
         align-items: center;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        position: relative;
-        &.shown {
-            display: flex;
+        border: 2px solid $color_4;
+        padding: 50px;
+        margin-bottom: 55px;
+        background: rgba(255, 255, 255, .03);
+        h3, p, div, ul {
+            background-color: transparent;
         }
-        .project-information {
-            width: 50%;
-            .title, .description, .other-info {
+        .featured-label {
+            color: $color_2;
+            font-family: 'Roboto Mono-Regular';
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: $color_2;
+            font-family: 'Uchen-Regular';
+            font-size: 46px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+        p {
+            line-height: 1.7;
+        }
+        .featured-image-link {
+            display: block;
+            overflow: hidden;
+            border: 1px solid $color_4;
+            .featured-image {
                 width: 100%;
+                display: block;
+                object-fit: cover;
+                transition: transform .3s ease-in-out;
             }
-            .title {
-                font-size: 50px;
-                font-family: 'Uchen-Regular';
-                color: $color_2;
-                padding-bottom: 20px;
-                margin-bottom: 10px;
-                border-bottom: 5px solid $color_4;
-            }
-            .other-info {
-                margin-top: 30px;
-                display: flex;
-                grid-column-gap: 80px;
-                .role, .technologies, .year {
-                    display: flex;
-                    flex-direction: column;
-                    font-family: "Roboto Mono-Regular";
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    color: $color_2;
-                    span {
-                        font-family: 'Uchen-Regular';
-                        font-size: 12px;
-                        text-transform: none;
-                    }
-                }
+            &:hover .featured-image {
+                transform: scale(1.03);
             }
         }
-        .project-count {
-            font-family: "Roboto Mono-Regular";
-            position: absolute;
-            top: -10px;
-            left: 0;
-            padding: 0 20px;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+    }
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $color_4;
+        min-height: 100%;
+        background: rgba(255, 255, 255, .025);
+        transition: transform .25s ease-in-out, box-shadow .25s ease-in-out;
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .14);
         }
         .project-image-link {
+            display: block;
+            overflow: hidden;
+            border-bottom: 1px solid $color_4;
             .project-image {
-                object-fit: contain;
-                position: absolute;
-                right: -40px;
-                padding: 30px 0;
-                width: 40%;
-                top: 50%;
-                transform: translateY(-50%);
+                width: 100%;
+                aspect-ratio: 16/10;
+                display: block;
+                object-fit: cover;
+                object-position: top center;
+                transition: transform .3s ease-in-out;
+            }
+            &:hover .project-image {
+                transform: scale(1.04);
             }
         }
-        .next, .prev {
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 28px;
+            .project-meta {
+                display: flex;
+                justify-content: space-between;
+                gap: 16px;
+                margin-bottom: 18px;
+                color: $color_2;
+                font-family: 'Roboto Mono-Regular';
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+            h3 {
+                color: $color_2;
+                font-family: 'Uchen-Regular';
+                font-size: 30px;
+                line-height: 1.1;
+                margin-bottom: 14px;
+            }
+            p {
+                flex: 1;
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 22px 0;
+        li {
+            border: 1px solid $color_4;
+            color: $color_2;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-family: 'Roboto Mono-Regular';
+            font-size: 11px;
+        }
+    }
+    .project-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: auto;
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $color_2;
             color: $color_1;
+            background-color: $color_2;
+            padding: 11px 18px;
+            font-family: 'Roboto Mono-Regular';
+            font-size: 12px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-size: 18px;
-            letter-spacing: 5px;
-            position: absolute;
-            bottom: -25px;
-            border-width: 1px;
-            padding: 10px 20px;
-        }
-        .prev {
-            right: 45%;
-        }
-        .next {
-            left: 60%;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+            &:hover {
+                color: $color_2;
+                background-color: transparent;
+            }
         }
     }
 }
-
 @media screen and (max-width: 1024px) {
     #work {
-        .each-project {
-            justify-content: space-between;
-            &.shown {
-                display: flex;
-            }
-            .project-information {
-                .title {
-                    font-size: 25px;
-                }
-            }
-            .project-image {
-                max-width: 100%;
-                max-height: 50%;
-                right: 0;
-                position: relative;
-                padding: 0;
-            }
-            .other-info {
-                .role, .technologies, .year {
-                    font-size: 12px;
-                }
-            }
-            .prev {
-                left: 10%;
-                right: auto;
-            }
-            .next {
-                right: 10%;
-                left: auto;
-            }
+        padding: 100px 50px 70px;
+        .work-header .section-title {
+            font-size: 52px;
+        }
+        .featured-project {
+            grid-template-columns: 1fr;
+        }
+        .projects-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
 }
-
 @media screen and (max-width: 768px) {
     #work {
-        padding: 50px 60px;
-        .each-project {
-            flex-direction: column;
-            height: auto;
-            margin: 0 10px 50px;
-            padding: 20px 10px;
-            .project-information {
-                width: 90%;
-                padding-top: 20px;
-                .title {
-                    padding-bottom: 10px;
-                }
-                .description {
-                    font-size: 14px;
-                }
-                .other-info {
-                    padding: 30px 0;
-                    grid-column-gap: 30px;
-                    .role, .technologies, .year {
-                        font-size: 12px;
-                    }
-                }
+        padding: 90px 30px 60px;
+        .work-header {
+            .section-title {
+                font-size: 42px;
             }
-            .project-image-link {
-                .project-image {
-                    position: relative;
-                    right: auto;
-                    padding: inherit;
-                    width: auto;
-                    top: auto;
-                }
+            .section-description {
+                font-size: 16px;
             }
-            .prev, .next {
-                font-size: 14px;
+        }
+        .featured-project {
+            padding: 30px;
+            h3 {
+                font-size: 34px;
             }
-            .prev {
-                left: 5%;
-            }
-            .next {
-                right: 5%;
-            }
+        }
+        .projects-grid {
+            grid-template-columns: 1fr;
         }
     }
 }
-
 @media screen and (max-width: 425px) {
     #work {
-        padding: 40px 10px;
-        .each-project {
-            margin: 0 20px;
-            height: calc(100vh - 130px);
-            justify-content: center;
-            .project-information {
-                .description {
-                    font-size: 12px;
-                    line-height: 1.2rem;
-                    grid-row: 2/4;
-                }
-            }
-            .other-info {
-                grid-column-gap: 20px;
-                line-height: 1.5;
-                justify-content: space-between;
-                flex-direction: column;
-                padding: 10px 0;
-                .role, .technologies, .year {
-                    font-size: 10px;
-                    padding-bottom: 10px;
-                }
-            }
-            .project-image {
-                padding: 0 20px 20px;
-            }
-            .prev, .next {
-                font-size: 12px;
-                padding: 5px 10px;
-            }
+        padding: 80px 18px 50px;
+        .work-header .section-title {
+            font-size: 34px;
+        }
+        .project-filters button {
+            font-size: 11px;
+            padding: 8px 12px;
+        }
+        .featured-project {
+            padding: 22px;
+        }
+        .project-card .project-content {
+            padding: 22px;
         }
     }
 }

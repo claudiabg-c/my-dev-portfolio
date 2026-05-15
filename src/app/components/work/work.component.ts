@@ -22,10 +22,12 @@ interface Project {
 export class WorkComponent implements OnInit {
 
   private debug: boolean = false;
+
   public lang: string = '';
   public dataLang: any = [];
   public projects: Project[] = [];
-  public shownProject: number = 1;
+  public technologies: string[] = [];
+  public selectedTech: string = 'All';
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -33,6 +35,7 @@ export class WorkComponent implements OnInit {
   ) {
     this._activeRouter.params.subscribe(params => {
       this.lang = params['lang'];
+      this.selectedTech = this.lang === 'es' ? 'Todos' : 'All';
     });
   }
 
@@ -41,50 +44,73 @@ export class WorkComponent implements OnInit {
     this.GetData();
   }
 
-  GetData() {
+  get allLabel(): string {
+    return this.lang === 'es' ? 'Todos' : 'All';
+  }
+
+  get featuredProject(): Project | null {
+    return this.projects.length ? this.projects[0] : null;
+  }
+
+  get filteredProjects(): Project[] {
+    if (this.selectedTech === this.allLabel) {
+      return this.projects;
+    }
+
+    //return all technologies except html
+    return this.projects.filter(project =>
+      this.getProjectTechnologies(project).some(tech => tech.toLowerCase() === this.selectedTech.toLowerCase())
+    );
+  }
+
+  GetData(): void {
     this._dataAPI.getContent().subscribe(res => {
       const loadedProjects = res.projects as Project[];
-  
+
       this.projects = loadedProjects.map((project: any, index: number) => {
         const i18n = project.i18n[this.lang];
+
         return {
           ...project,
           ...i18n,
-          id: index + 1,
-          class: (index + 1 === this.shownProject) ? 'shown' : 'd-none'
+          id: index + 1
         };
       });
+
+      this.setTechnologies();
+
+      if (this.debug) {
+        console.log('****** PROJECTS: ', this.projects);
+        console.log('****** TECHNOLOGIES: ', this.technologies);
+      }
     });
   }
 
-  GetDataLang(lang: string) {
+  GetDataLang(lang: string): void {
     this._dataAPI.getContentLang().subscribe(res => {
       this.dataLang = res[lang];
     });
   }
 
-  nextProject() {
-    if (this.shownProject < this.projects.length) {
-      this.shownProject++;
-      this.updateProjectVisibility();
-    }
+  filterProjects(tech: string): void {
+    this.selectedTech = tech;
   }
-  
-  prevProject() {
-    if (this.shownProject > 1) {
-      this.shownProject--;
-      this.updateProjectVisibility();
+
+  getProjectTechnologies(project: Project): string[] {
+    if (!project?.technologies) {
+      return [];
     }
+
+    return project.technologies
+      .split(',')
+      .map(tech => tech.trim())
+      .filter(Boolean);
   }
-  
-  private updateProjectVisibility() {
-    this.projects = this.projects.map((project: Project, index: number) => ({
-      ...project,
-      class: (index + 1 === this.shownProject) ? 'shown' : 'd-none'
-    }));
-    setTimeout(() => {
-      const elements = document.querySelectorAll('.each-project');
-      elements.forEach(el => el.classList.add('transition-fix'));
-    }, 0);
+
+  private setTechnologies(): void {
+    const projectTechnologies = this.projects
+      .flatMap(project => this.getProjectTechnologies(project));
+
+    this.technologies = [this.allLabel, ...Array.from(new Set(projectTechnologies))];
   }
 }

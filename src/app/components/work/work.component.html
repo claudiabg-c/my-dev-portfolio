@@ -1,21 +1,71 @@
 <section class="work" id="work">
-    <article class="project-container" *ngFor="let project of projects; let i = index;" [id]="'project-' + project.id">
-        <div class="each-project" [ngClass]="{'shown': i + 1 === shownProject, 'd-none': i + 1 !== shownProject}">
-            <div class="project-count"><span class="actual-project">{{i + 1}}</span> / <span class="all-projects">{{projects.length}}</span></div>
-            <div class="project-information">
-                <h1 class="title">{{project.title}}</h1>
-                <p class="description">{{project.description}}</p>
-                <ul class="other-info">
-                    <li class="role">{{dataLang.role}}<span>{{project.role}}</span></li>
-                    <li class="technologies">{{dataLang.technologie}}<span>{{project.technologies}}</span></li>
-                    <li class="year">{{dataLang.year}}<span>{{project.year}}</span></li>
-                </ul>
+    <header class="work-header">
+        <p class="section-kicker">{{dataLang.work}}</p>
+        <h2 class="section-title">{{lang === 'es' ? 'Proyectos seleccionados' : 'Selected projects'}}</h2>
+        <p class="section-description">
+            {{lang === 'es'
+                ? 'Una selección de proyectos frontend centrados en interfaces limpias, diseño responsive y experiencia de usuario.'
+                : 'A selection of frontend projects focused on clean interfaces, responsive design and user experience.'}}
+        </p>
+    </header>
+
+    <div class="project-filters" *ngIf="technologies.length > 1">
+        <button
+            type="button"
+            *ngFor="let tech of technologies"
+            [class.active]="selectedTech === tech"
+            (click)="filterProjects(tech)">
+            {{tech}}
+        </button>
+    </div>
+
+    <div class="featured-project" *ngIf="featuredProject">
+        <div class="featured-content">
+            <p class="featured-label">{{lang === 'es' ? 'Proyecto destacado' : 'Featured project'}}</p>
+            <h3>{{featuredProject.title}}</h3>
+            <p>{{featuredProject.description}}</p>
+
+            <ul class="tech-list">
+                <li *ngFor="let tech of getProjectTechnologies(featuredProject)">{{tech}}</li>
+            </ul>
+
+            <div class="project-actions">
+                <a [href]="featuredProject.link" target="_blank" rel="noopener noreferrer">
+                    {{lang === 'es' ? 'Ver proyecto' : 'View project'}}
+                </a>
             </div>
-            <a [href]="project.link" class="project-image-link" target="_blank" rel="noopener noreferrer">
-                <img class="project-image" [src]="project.image">
-            </a>
-            <button class="prev" (click)="prevProject()" *ngIf="shownProject > 1">{{dataLang.prev}}</button>
-            <button class="next" (click)="nextProject()" *ngIf="shownProject < projects.length">{{dataLang.next}}</button>
         </div>
-    </article>
+
+        <a [href]="featuredProject.link" class="featured-image-link" target="_blank" rel="noopener noreferrer">
+            <img class="featured-image" [src]="featuredProject.image" [alt]="featuredProject.title" loading="lazy">
+        </a>
+    </div>
+
+    <div class="projects-grid">
+        <article class="project-card" *ngFor="let project of filteredProjects">
+            <a [href]="project.link" class="project-image-link" target="_blank" rel="noopener noreferrer">
+                <img class="project-image" [src]="project.image" [alt]="project.title" loading="lazy">
+            </a>
+
+            <div class="project-content">
+                <div class="project-meta">
+                    <span>{{project.year}}</span>
+                    <span>{{project.role}}</span>
+                </div>
+
+                <h3>{{project.title}}</h3>
+                <p>{{project.description}}</p>
+
+                <ul class="tech-list">
+                    <li *ngFor="let tech of getProjectTechnologies(project)">{{tech}}</li>
+                </ul>
+
+                <div class="project-actions">
+                    <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+                        {{lang === 'es' ? 'Ver proyecto' : 'View project'}}
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
 </section>
