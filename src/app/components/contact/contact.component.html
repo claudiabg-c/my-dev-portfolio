@@ -1,36 +1,69 @@
 <section class="contact-me" id="contact">
-    <h1>Contacto</h1>
-    <form *ngIf="formVisible" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
-        <div class="form-group">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required [(ngModel)]="formData.name">
-            <div class="error-msg"
-                *ngIf="contactForm.controls['name']?.errors?.['required'] && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
-                El nombre es necesario. A nadie le gusta recibir anónimos ;)
-            </div>
+    <div class="contact-card">
+        <div class="contact-intro">
+            <p class="section-label">{{data.section_label}}</p>
+            <h1>Hola</h1>
+            <p class="contact-description"> {{data.description}} </p>
         </div>
-
-        <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
-            <div class="error-msg"
-                *ngIf="contactForm.controls['email']?.errors?.['required'] && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">
-                El correo electrónico es necesario para que pueda responderte.
+        <form *ngIf="formVisible" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">{{data.name_label}}</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        [(ngModel)]="formData.name"
+                        [class.has-error]="contactForm.controls['name']?.errors?.['required'] && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
+                    <div class="error-msg"
+                        *ngIf="contactForm.controls['name']?.errors?.['required'] && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
+                        {{data.name_required}} </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">{{data.email_label}}</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        email
+                        autocomplete="email"
+                        [(ngModel)]="formData.email"
+                        [ngModelOptions]="{updateOn: 'blur'}"
+                        [class.has-error]="contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched">
+                    <div class="error-msg"
+                        *ngIf="contactForm.controls['email']?.errors?.['required'] && contactForm.controls['email']?.touched">
+                        {{data.email_required}} </div>
+                    <div class="error-msg"
+                        *ngIf="contactForm.controls['email']?.errors?.['email'] && contactForm.controls['email']?.touched">
+                        {{data.email_invalid}} </div>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required [(ngModel)]="formData.message"></textarea>
-            <div class="error-msg"
-                *ngIf="contactForm.controls['message']?.errors?.['required'] && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
-                Por favor, escribe un mensaje. Y si es bonito, mejor 🤍
+            <div class="form-group full-width">
+                <label for="message">{{data.message_label}}</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows="6"
+                    [(ngModel)]="formData.message"
+                    [class.has-error]="contactForm.controls['message']?.errors?.['required'] && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)"></textarea>
+                <div class="error-msg"
+                    *ngIf="contactForm.controls['message']?.errors?.['required'] && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
+                    {{data.message_required}} </div>
             </div>
+            <div class="form-actions">
+                <p class="form-note">{{data.form_note}}</p>
+                <button type="submit" [disabled]="contactForm.invalid || formSending"> {{ formSending ? data.sending :
+                    data.submit }} </button>
+            </div>
+            <div *ngIf="formError" class="form-error" role="alert"> {{data.error}} </div>
+        </form>
+        <div *ngIf="formSubmitted" class="thanks" role="status">
+            <span>{{data.thanks_title}}</span>
+            <p>{{data.thanks_text}}</p>
         </div>
-
-        <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
-    </form>
-    <div *ngIf="formSubmitted" class="thanks">
-        ¡Gracias por tu mensaje!
     </div>
 </section>
