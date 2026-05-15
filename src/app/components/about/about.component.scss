@@ -143,7 +143,7 @@
         margin: 30px;
         ul {
             display: grid;
-            grid-template-columns: repeat(3, 1fr) repeat(4, 2fr);
+            grid-template-columns: repeat(3, 1fr) repeat(5, 2fr);
             position: relative;
             &.timeline-professions {
                 height: 150px;
@@ -173,7 +173,7 @@
                         }
                     }
                     &.developer {
-                        grid-column: 4/8;
+                        grid-column: 4/9;
                         top: 0;
                         border-color: $color_2;
                     }
@@ -210,7 +210,7 @@
                         border-color: $color_7;
                     }
                     &.job.bbva {
-                        grid-column: 7/8;
+                        grid-column: 7/9;
                         bottom: 65px;
                         width: 100%;
                         border-color: $color_2;
@@ -218,6 +218,7 @@
                 }
             }
             &.timeline-years {
+                grid-template-columns: repeat(3, 1fr) repeat(5, 2fr);
                 border-top: 1px solid $color_1;
                 text-align: center;
                 margin-top: 5px;
@@ -348,7 +349,7 @@
                             width: 100%;
                         }
                         &.job.bbva {
-                            grid-column: 7/8;
+                            grid-column: 7/9;
                             left: 0;
                             width: 100%;
                         }
@@ -361,7 +362,6 @@
                     }
                 }
                 &.timeline-years {
-                    grid-template-columns: repeat(3, 1fr) repeat(4, 2fr);
                     li {
                         font-size: 10px;
                         &.year-2018, &.year-2019 {

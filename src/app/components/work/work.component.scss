@@ -147,12 +147,14 @@
                     }
                 }
             }
-            .project-image {
-                width: 100%;
-                height: auto;
-                right: 0;
-                position: relative;
-                padding: 50px;
+            .project-image-link {
+                .project-image {
+                    position: relative;
+                    right: auto;
+                    padding: inherit;
+                    width: auto;
+                    top: auto;
+                }
             }
             .prev, .next {
                 font-size: 14px;
