@@ -14,14 +14,15 @@ export class NavbarComponent implements OnInit {
 
   public config: any = [];
   public data: any = [];
-  public path: string = "";
-  public lang: string = "";
-  public otherLang: string = "";
-  public selectLang: string = "";
+  public path: string = '';
+  public lang: string = '';
+  public otherLang: string = '';
+  public selectLang: string = '';
   public dataLang: any = [];
   public langData: any = [];
   public otherLangData: any = [];
   public rrss: any = {};
+  public isMenuOpen: boolean = false;
 
   constructor(
     private _activeRouter: ActivatedRoute,
@@ -29,9 +30,9 @@ export class NavbarComponent implements OnInit {
     public _router: Router
   ) {
     this._activeRouter.params.subscribe(params => {
-      if (this.debug) {console.log('*** LOADING PARAMS...'); console.log(params);}
+      if (this.debug) { console.log('*** LOADING PARAMS...'); console.log(params); }
       this.lang = params['lang'];
-      this.path = params['lang'] + "/home";
+      this.path = params['lang'] + '/home';
     });
   }
 
@@ -42,92 +43,94 @@ export class NavbarComponent implements OnInit {
     this.changeNavbarOpacity();
   }
 
-  GetConfig(){
+  GetConfig(): void {
     this._dataAPI.getConfig().subscribe(res => {
       this.config = res.config;
-      if (this.debug) {
-        console.log("****** CONFIG INFO: ", this.config);
-      }
     });
   }
 
-  GetData() {
-    if (this.debug) {console.log('*** LOADING DATA...');}
+  GetData(): void {
     this._dataAPI.getContent().subscribe(res => {
       this.data = res[this.lang];
-
       this.rrss = res.rrss;
-      if (this.debug) {
-        console.log("****** DATA: ", this.data);
-        console.log("****** RRSS: ", this.rrss);
-      }
     });
   }
-  
-  GetDataLang(lang: string) {
+
+  GetDataLang(lang: string): void {
     this.lang === 'es' ? this.otherLang = 'en' : this.otherLang = 'es';
+
     this._dataAPI.getContentLang().subscribe(res => {
       this.langData = res[lang].language;
       this.otherLangData = res[this.otherLang].language;
       this.selectLang = res[lang].selectLang;
       this.dataLang = res[lang];
-      
-
-      if (this.debug) {
-        console.log("****** LANG DATA: ", this.langData);
-      }
     });
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
   showOtherLangs(): void {
-    document.querySelector('.dropdown-content')?.classList.toggle('d-block')
+    document.querySelector('.dropdown-content')?.classList.toggle('d-block');
   }
 
   goToAboutMe(): void {
-    const aboutMe = document.getElementById('about-me');
-    aboutMe?.scrollIntoView({
-      behavior: 'smooth'
-    })
+    this.scrollToSection('about-me');
   }
 
   goToWork(): void {
-    const work = document.getElementById('work');
-    work?.scrollIntoView({
-      behavior: 'smooth'
-    })
+    this.scrollToSection('work');
   }
 
   goToContact(): void {
-    const contact = document.getElementById('contact');
-    contact?.scrollIntoView({
-      behavior: 'smooth'
-    })
+    this.scrollToSection('contact');
   }
-  
+
   reloadThePage(): void {
-    this._router.navigateByUrl('/' + this.otherLang + '/home', {skipLocationChange: false}).then(() => {
+    this._router.navigateByUrl('/' + this.otherLang + '/home', { skipLocationChange: false }).then(() => {
       window.location.reload();
     });
   }
 
   scrollToTop(): void {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.closeMenu();
   }
 
-  goToLink(url: string){
+  goToLink(url: string): void {
     window.open(url, '_blank', 'location=yes,width=1000,height=700,scrollbars=yes,status=yes');
+    this.closeMenu();
   }
 
-  changeNavbarOpacity() {
-    const navbar = document.querySelector('.container-navbar')
+  changeNavbarOpacity(): void {
+    const navbar = document.querySelector('.container-navbar');
+
     const onScroll = () => {
       const scroll = document.documentElement.scrollTop;
+
       if (scroll > 0) {
         navbar?.classList.add('scrolled');
       } else {
-        navbar?.classList.remove('scrolled')
+        navbar?.classList.remove('scrolled');
       }
-    }
-    window.addEventListener('scroll', onScroll)
-  };
+    };
+
+    window.addEventListener('scroll', onScroll);
+  }
+
+  private scrollToSection(sectionId: string): void {
+    const section = document.getElementById(sectionId);
+
+    section?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    this.closeMenu();
+  }
 }

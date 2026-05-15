@@ -1,29 +1,48 @@
 <section class="container-navbar">
     <div class="logo text-left">
-        <a [routerLink]="['/' + lang + '/home']" (click)="scrollToTop()">
+        <a [routerLink]="['/' + lang + '/home']" (click)="scrollToTop()" aria-label="Home">
             <img src="./assets/ui/images/logo.png" class="img-fluid" title="Logo {{config.name}}" alt="Logo {{config.name}}">
         </a>
     </div>
-    <section class="navbar-sections">
+
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <section class="navbar-sections" [class.open]="isMenuOpen">
         <ol class="info">
-            <li><a (click)="goToAboutMe()">{{dataLang.about}}</a></li>
-            <li><a (click)="goToWork()">{{dataLang.work}}</a></li>
-            <li><a (click)="goToContact()">{{dataLang.contact}}</a></li>
+            <li>
+                <button type="button" (click)="goToAboutMe()">{{dataLang.about}}</button>
+            </li>
+            <li>
+                <button type="button" (click)="goToWork()">{{dataLang.work}}</button>
+            </li>
+            <li>
+                <button type="button" (click)="goToContact()">{{dataLang.contact}}</button>
+            </li>
         </ol>
+
         <button class="resume" title="{{dataLang.view}} {{dataLang.resume}}" (click)="goToLink('./assets/documents/' + dataLang.resume + '_Claudia_Berrocal.pdf')">
             <span>{{dataLang.resume}}</span>
         </button>
+
         <div class="social-media language">
-            <a *ngIf="rrss.linkedin" [href]="rrss.linkedin" class="rrss text-right" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a *ngIf="rrss.github" [href]="rrss.github" class="rrss text-right" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a *ngIf="rrss.linkedin" [href]="rrss.linkedin" class="rrss text-right" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a *ngIf="rrss.github" [href]="rrss.github" class="rrss text-right" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
             <div class="dropdown">
-                <button class="dropbtn" [title]="selectLang" (click)="showOtherLangs()">
-                    <img [src]="langData.flag" alt="langData.name">
+                <button class="dropbtn" type="button" [title]="selectLang" (click)="showOtherLangs()">
+                    <img [src]="langData.flag" alt="{{langData.name}}">
                 </button>
                 <div class="dropdown-content">
-                    <a (click)="reloadThePage()" [title]="otherLangData.name">
-                        <img [src]="otherLangData.flag" alt="otherLangData.name">
-                    </a>
+                    <button type="button" (click)="reloadThePage()" [title]="otherLangData.name">
+                        <img [src]="otherLangData.flag" alt="{{otherLangData.name}}">
+                    </button>
                 </div>
             </div>
         </div>

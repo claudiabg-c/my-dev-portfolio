@@ -2,61 +2,97 @@
 
 .container-navbar {
     width: 100%;
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 2;
+    top: 0;
+    left: 0;
+    z-index: 10;
     background-color: transparent;
-    transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+
     &.scrolled {
         background-color: $color_3;
-        transition: all .5s ease-in-out;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
     }
+
     .logo {
-        opacity: 0;
+        opacity: 1;
+        z-index: 11;
     }
+
     .img-fluid {
         color: $color_1;
-        margin: 10px;
+        margin: 10px 18px;
         height: 50px;
         transition: all .2s ease-in-out;
+
         &:hover {
-            transform: scale(1.2);
-            transition: all .2s ease-in-out;
+            transform: scale(1.08);
         }
     }
+
+    .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        margin-right: 18px;
+        background-color: transparent;
+        border: 1px solid $color_4;
+        cursor: pointer;
+        z-index: 11;
+
+        span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            margin: 5px auto;
+            background-color: $color_2;
+        }
+    }
+
     .navbar-sections {
         color: $color_2;
         display: flex;
+        align-items: center;
         background: transparent;
+
         .info {
             display: flex;
             list-style-type: decimal-leading-zero;
             background: transparent;
+            margin: 0;
+
             li {
                 padding: 4px 70px 5px 0;
                 background: transparent;
+
                 &:last-of-type {
                     padding-right: 30px;
                 }
+
                 &::marker {
                     font-family: 'Roboto Mono-Regular';
                 }
-                a {
+
+                button {
                     color: $color_2;
+                    border: none;
                     border-bottom: 1px solid $color_2;
                     position: relative;
                     background-color: transparent;
                     cursor: pointer;
+                    padding: 0;
+                    font: inherit;
+
                     &::before {
                         content: '';
                         transform-origin: 100% 50%;
                         transition: transform 0.3s;
                         transform: scale3d(0, 1, 1);
                         pointer-events: none;
-                    }
-                    &::before, &::after {
                         background-color: currentColor;
                         position: absolute;
                         width: 100%;
@@ -64,54 +100,75 @@
                         left: 0;
                         height: 1px;
                     }
-                    &:hover, &:active, &:visited {
-                        border: none !important;
-                        text-decoration: none !important;
-                        outline: none !important;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        border-color: transparent;
+                        text-decoration: none;
+                        outline: none;
                     }
-                    &:hover::before {
+
+                    &:hover::before,
+                    &:focus::before {
                         transform-origin: 0% 50%;
                         transform: scale3d(1, 1, 1);
                     }
                 }
             }
         }
+
         .resume {
             margin-right: 20px;
         }
+
         .social-media {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+
             .fa-brands {
                 padding: 10px;
                 color: $color_2;
             }
+
             .dropdown {
                 position: relative;
                 display: inline-block;
                 transform: translateY(-2px);
+
                 .dropbtn {
-                    background-color: $background_color;
+                    background-color: transparent;
                     border: none;
+                    cursor: pointer;
+
                     img {
                         height: 25px;
                         border-radius: 50px;
                     }
                 }
+
                 .dropdown-content {
                     display: none;
                     position: absolute;
                     z-index: 1;
-                    right: 9px;
-                    a {
+                    right: 0;
+
+                    button {
                         padding: 12px 7px;
                         display: block;
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+
                         img {
                             height: 25px;
                             border-radius: 70px;
                             object-fit: cover;
-                            cursor: pointer;
+                            transition: all .2s ease-in-out;
+
                             &:hover {
                                 transform: scale(1.2);
-                                transition: all .2s ease-in-out;
                             }
                         }
                     }
@@ -121,24 +178,54 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .container-navbar {
         .navbar-sections {
-            .info, .resume {
-                font-size: 10px;
-                li {
-                    padding: 4px 50px 5px 0;
-                }
+            .info li {
+                padding-right: 35px;
             }
         }
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .container-navbar {
+        .menu-toggle {
+            display: block;
+        }
+
         .navbar-sections {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 18px;
+            padding: 24px;
+            background-color: $color_3;
+            border-top: 1px solid $color_4;
+
+            &.open {
+                display: flex;
+            }
+
             .info {
-                display: none;
+                flex-direction: column;
+                gap: 16px;
+
+                li {
+                    padding: 0;
+                }
+            }
+
+            .resume {
+                width: fit-content;
+            }
+
+            .social-media {
+                margin-right: 0;
             }
         }
     }
