@@ -49,7 +49,8 @@ export class WorkComponent implements OnInit {
   }
 
   get featuredProject(): Project | null {
-    return this.projects.length ? this.projects[0] : null;
+    const matches = this.filteredProjects;
+    return matches && matches.length ? matches[0] : null;
   }
 
   get filteredProjects(): Project[] {
@@ -57,7 +58,6 @@ export class WorkComponent implements OnInit {
       return this.projects;
     }
 
-    //return all technologies except html
     return this.projects.filter(project =>
       this.getProjectTechnologies(project).some(tech => tech.toLowerCase() === this.selectedTech.toLowerCase())
     );
